@@ -1,0 +1,1458 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/image/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-8.0.2" name="generator"/>
+<title>OpenFOAM 安装 - Iydon's Blog</title>
+<link href="../../assets/stylesheets/main.816931ca.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.9204c3b2.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#openfoam">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Iydon's Blog" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Iydon's Blog">
+<img alt="logo" src="../../assets/image/favicon.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Iydon's Blog
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              OpenFOAM 安装
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tags.html">
+      Tags
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../lts/1/">
+        LTS
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../25/">
+        Year 2021
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Iydon's Blog" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Iydon's Blog">
+<img alt="logo" src="../../assets/image/favicon.png"/>
+</a>
+    Iydon's Blog
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tags.html">
+        Tags
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          LTS
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="LTS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          LTS
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/1/">
+        诗词歌赋
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/2/">
+        知乎收藏夹整理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/3/">
+        哔哩哔哩收藏夹整理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/4/">
+        Doki Doki Literature Club!
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/5/">
+        Markdown 特性
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Year 2021
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Year 2021" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Year 2021
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1">
+          December
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="December" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+          December
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../25/">
+        💾中文文案排版指北
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../24/">
+        💾对开发人员有用的定律、理论、原则和模式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../23/">
+        Low-Poly 风格化照片
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../22/">
+        💾How to Disagree
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../21/">
+        【简介】工程应用中的机器学习
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../20/">
+        【21-12】上月总结与本月规划
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2">
+          November
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="November" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          November
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../19/">
+        Apache 映射子域名到特定文件夹
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../18/">
+        在 Rust 中使用过程宏模拟 Python 缩进语法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../17/">
+        Jupyter Notebook 测试
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../16/">
+        Codeforces 个人工具
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../15/">
+        CS:GO 配置文件
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../14/">
+        Mermaid
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../13/">
+        名探偵コナン主线汇总
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../12/">
+        💾The Economics of Open Source
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          OpenFOAM 安装
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        OpenFOAM 安装
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    简要介绍
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    编译步骤
+  </a>
+<nav aria-label="编译步骤" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    安装依赖
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#openfoam_1">
+    编译 OpenFOAM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#openfoam_2">
+    验证 OpenFOAM
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../10/">
+        简单禁用打印、复制，自动虚化
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../9/">
+        🔒博客加密测试
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../8/">
+        RapidCFD 安装
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../7/">
+        PDF 转图片
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../6/">
+        Overleaf 上使用中文
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../5/">
+        图片压缩
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../4/">
+        【21-11】上月总结与本月规划
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3">
+          October
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="October" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          October
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../3/">
+        Nuitka 初探
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../2/">
+        WebAssembly 初探
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1/">
+        创世纪
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    简要介绍
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    编译步骤
+  </a>
+<nav aria-label="编译步骤" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    安装依赖
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#openfoam_1">
+    编译 OpenFOAM
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#openfoam_2">
+    验证 OpenFOAM
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="openfoam"><a href="https://github.com/OpenFOAM">OpenFOAM</a> 安装</h1>
+<h2 id="_1">简要介绍</h2>
+<p>OpenFOAM（英文 Open Source Field Operation and Manipulation 的缩写，意为开源的场运算和处理软件）是对连续介质力学问题进行数值计算的 C++ 自由软件工具包，其代码遵守 GNU 通用公共许可证。它可进行数据预处理、后处理和自定义求解器，常用于计算流体力学领域。</p>
+<h2 id="_2">编译步骤</h2>
+<p>如果想偷懒，尽量少输入命令行的话，可以参考 <a href="http://dyfluid.com/docs/install.html">dyfluid.com</a>。</p>
+<h3 id="_3">安装依赖</h3>
+<p>参考<a href="https://openfoam.org/download/source/">官方编译步骤</a>，如果使用 Ubuntu 系统，则通过下列命令安装依赖。为了提升网络下载速度，可能需要配置镜像网站，例如<a href="https://mirrors.ustc.edu.cn/">中科大镜像</a>、<a href="https://mirrors.sustech.edu.cn/">南科大镜像</a>、<a href="https://developer.aliyun.com/mirror/">阿里云镜像</a>等。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install build-essential flex bison git-core cmake zlib1g-dev libboost-system-dev libboost-thread-dev libopenmpi-dev openmpi-bin gnuplot libreadline-dev libncurses-dev libxt-dev
+</code></pre></div>
+</td></tr></table></p>
+<p>如果最后编译时报错找不到 <code>scotch.h</code> 或者 <code>ptscotch.h</code>，则需继续通过下列命令安装额外依赖。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>sudo apt install libscotch-dev libptscotch-dev
+</code></pre></div>
+</td></tr></table></p>
+<h3 id="openfoam_1">编译 OpenFOAM</h3>
+<p>首先我们从官方仓库下载特定版本的 OpenFOAM，目前最新版本为 OpenFOAM v9.0，配置文件并没有硬编码仓库位置，所以理论上下载在哪里均可。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>git clone https://e.coding.net/dyfluid/OpenFOAM/OpenFOAM-9.git
+</code></pre></div>
+</td></tr></table></p>
+<p>为了让 OpenFOAM 多版本并存，可以利用 <code>alias</code> 命令惰性加载配置文件。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">alias</span> <span class="nv">of9</span><span class="o">=</span><span class="s2">"source /&lt;path-to-OpenFOAM-9&gt;/etc/bashrc"</span>
+</code></pre></div>
+</td></tr></table></p>
+<p>最后就可以编译 OpenFOAM 了。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">source</span> /&lt;path-to-OpenFOAM-9&gt;/etc/bashrc  <span class="c1"># of9</span>
+./Allwmake -j
+</code></pre></div>
+</td></tr></table></p>
+<details>
+<summary>stdout + stderr</summary>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Compiling enabled on 4 cores
+Allwmake /opt/OpenFOAM/OpenFOAM-9
+make: Nothing to be done for 'all'.
+Allwmake: no ThirdParty directory found - skipping
+Allwmake src
+same version as previous build
+Allwmake src/Pstream
+wmake dummy
+wmake mpi
+Allwmake libo src/OSspecific/POSIX
+wmake libo .
+wmake OpenFOAM
+wmake fileFormats
+wmake surfMesh
+wmake triSurface
+wmake meshTools
+Allwmake src/dummyThirdParty
+wmake scotchDecomp
+wmake ptscotchDecomp
+wmake metisDecomp
+wmake MGridGen
+wmake finiteVolume
+wmake lagrangian/basic
+wmake lagrangian/distributionModels
+wmake genericPatchFields
+wmake mesh/extrudeModel
+wmake dynamicMesh
+Allwmake src/parallel
+Allwmake src/parallel/decompose
+    using SCOTCH_ARCH_PATH=/opt/OpenFOAM/ThirdParty-9/platforms/linux64GccDPInt32/scotch_6.0.9
+wmake scotchDecomp
+wmake  ptscotchDecomp
+wmake ptscotchDecomp
+Allwmake src/parallel/decompose/metisDecomp
+    using METIS_ARCH_PATH=/opt/OpenFOAM/ThirdParty-9/platforms/linux64GccDPInt32/metis-5.1.0
+wmake decompositionMethods
+wmake decompose
+Allwmake src/parallel/reconstruct
+wmake reconstruct
+wmake distributed
+wmake dynamicFvMesh
+wmake topoChangerFvMesh
+wmake conversion
+wmake sampling
+wmake ODE
+wmake randomProcesses
+wmake transportModels
+Allwmake src/thermophysicalModels
+wmake specie
+wmake thermophysicalProperties
+wmake basic
+wmake reactionThermo
+wmake laminarFlameSpeed
+wmake chemistryModel
+wmake barotropicCompressibilityModel
+wmake solidThermo
+Allwmake src/twoPhaseModels
+wmake twoPhaseMixture
+wmake interfaceProperties
+wmake twoPhaseProperties
+wmake incompressibleTwoPhaseMixture
+wmake immiscibleIncompressibleTwoPhaseMixture
+wmake twoPhaseChange
+Allwmake src/MomentumTransportModels
+wmake momentumTransportModels
+wmake incompressible
+wmake compressible
+wmake phaseIncompressible
+wmake phaseCompressible
+Allwmake src/ThermophysicalTransportModels
+wmake fluidReactionThermo
+wmake phaseFluidThermo
+wmake phaseFluidReactionThermo
+wmake radiationModels
+wmake combustionModels
+Allwmake src/regionModels
+wmake regionModel
+wmake surfaceFilmModels
+wmake thermalBaffleModels
+Allwmake src/lagrangian
+wmake distributionModels
+wmake basic
+wmake solidParticle
+wmake parcel
+wmake parcelTurbulence
+wmake DSMC
+Allwmake src/lagrangian/molecularDynamics
+wmake potential
+wmake molecularMeasurements
+wmake molecule
+Allwmake src/mesh
+wmake snappyHexMesh
+wmake blockMesh
+wmake extrudeModel
+Allwmake src/renumber
+    skipping zoltanRenumber
+wmake renumberMethods
+Allwmake src/fvAgglomerationMethods
+wmake pairPatchAgglomeration
+wmake fvMotionSolver
+wmake engine
+wmake fvModels
+wmake fvConstraints
+Allwmake src/functionObjects
+wmake field
+wmake forces
+wmake lagrangian
+wmake utilities
+wmake solvers
+wmake sixDoFRigidBodyMotion
+wmake sixDoFRigidBodyState
+wmake rigidBodyDynamics
+wmake rigidBodyMeshMotion
+wmake rigidBodyState
+wmake specieTransfer
+wmake atmosphericModels
+wmake waves
+Allwmake applications
+wmake solvers
+wmake basic
+wmake combustion
+wmake compressible
+wmake discreteMethods
+wmake laplacianFoam
+wmake chemFoam
+wmake rhoCentralFoam
+wmake dsmc
+Allwmake applications/solvers/compressible/rhoCentralFoam
+wmake BCs
+wmake dsmcFoam
+wmake coldEngineFoam
+wmake molecularDynamics
+wmake potentialFoam
+wmake mdEquilibrationFoam
+wmake scalarTransportFoam
+wmake PDRFoam
+wmake laminarFlameSpeed
+wmake mdFoam
+wmake rhoPimpleFoam
+wmake SCOPE
+wmake PDRModels
+wmake dragModels
+wmake basic
+wmake PDRDragModel
+wmake DNS
+wmake turbulence
+wmake dnsFoam
+wmake PDRkEpsilon
+wmake XiEqModels
+wmake basicXiSubXiEq
+wmake XiGModels
+wmake basicXiSubG
+wmake electromagnetics
+wmake rhoSimpleFoam
+wmake electrostaticFoam
+wmake XiModels
+wmake rhoPorousSimpleFoam
+wmake algebraic
+wmake fixed
+wmake transport
+wmake XiEqModels
+wmake Gulder
+wmake instabilityXiEq
+wmake financial
+wmake SCOPEBlendXiEq
+wmake financialFoam
+wmake SCOPEXiEq
+wmake XiEqModel
+wmake XiGModels
+wmake magneticFoam
+wmake instabilityG
+wmake KTS
+wmake XiGModel
+wmake XiModel
+wmake heatTransfer
+wmake buoyantPimpleFoam
+wmake mhdFoam
+wmake incompressible
+wmake adjointShapeOptimisationFoam
+wmake adjointOutletPressure
+wmake adjointOutletVelocity
+wmake buoyantSimpleFoam
+wmake lagrangian
+wmake denseParticleFoam
+wmake reactingFoam
+wmake boundaryFoam
+wmake buoyantReactingFoam
+wmake chtMultiRegionFoam
+wmake particleFoam
+wmake fluid
+wmake include
+wmake solid
+wmake icoFoam
+wmake engineFoam
+wmake rhoParticleFoam
+wmake thermoFoam
+wmake nonNewtonianIcoFoam
+wmake multiphase
+wmake stressAnalysis
+wmake cavitatingFoam
+wmake solidDisplacementFoam
+Allwmake applications/solvers/stressAnalysis/solidDisplacementFoam
+wmake solidDisplacementThermo
+wmake pimpleFoam
+wmake SRFPimpleFoam
+wmake XiFoam
+wmake XiEngineFoam
+wmake compressibleInterFoam
+Allwmake applications/solvers/multiphase/compressibleInterFoam
+wmake twoPhaseMixtureThermo
+wmake surfaceTensionModels
+wmake pisoFoam
+wmake solidEquilibriumDisplacementFoam
+wmake shallowWaterFoam
+wmake simpleFoam
+wmake twoPhaseChange
+wmake SRFSimpleFoam
+wmake porousSimpleFoam
+wmake compressibleMultiphaseInterFoam
+Allwmake applications/solvers/multiphase/compressibleMultiphaseInterFoam
+wmake multiphaseMixtureThermo
+wmake driftFluxFoam
+Allwmake applications/solvers/multiphase/driftFluxFoam
+wmake mixtureViscosityModels
+wmake compressibleInterPhaseTransportModel
+wmake interFoam
+wmake interMixingFoam
+wmake immiscibleIncompressibleThreePhaseMixture
+wmake incompressibleThreePhaseMixture
+wmake threePhaseInterfaceProperties
+wmake relativeVelocityModels
+wmake multiphaseEulerFoam
+Allwmake applications/solvers/multiphase/multiphaseEulerFoam
+wmake phaseSystems
+wmake VoFClouds
+wmake VoFSurfaceFilm
+wmake multiphaseInterFoam
+Allwmake applications/solvers/multiphase/multiphaseInterFoam
+wmake multiphaseMixture
+wmake potentialFreeSurfaceFoam
+wmake twoLiquidMixingFoam
+wmake interfacialModels
+wmake interfacialCompositionModels
+wmake multiphaseCompressibleMomentumTransportModels
+wmake multiphaseReactions
+Allwmake applications/solvers/multiphase/multiphaseEulerFoam/multiphaseEulerFoam
+wmake multiphaseSystems
+wmake functionObjects
+wmake utilities
+wmake mesh
+wmake miscellaneous
+wmake parallelProcessing
+wmake postProcessing
+wmake foamDictionary
+wmake dataConversion
+wmake decomposePar
+wmake advanced
+wmake foamDataToFluent
+wmake autoRefineMesh
+wmake foamFormatConvert
+wmake collapseEdges
+wmake foamToEnsight
+wmake reconstructPar
+wmake foamListTimes
+wmake combinePatchFaces
+wmake foamToEnsightParts
+wmake reconstructParMesh
+wmake patchSummary
+wmake modifyMesh
+wmake foamToGMV
+wmake redistributePar
+wmake graphics
+wmake ensightFoamReader
+Allwmake applications/utilities/postProcessing/graphics/ensightFoamReader
+wmake PDRMesh
+wmake preProcessing
+wmake applyBoundaryLayer
+wmake foamToTecplot360
+Allwmake applications/utilities/postProcessing/dataConversion/foamToTecplot360
+wmake foamToTetDualMesh
+wmake refineHexMesh
+wmake PVReaders
+wmake foamToVTK
+Allwmake applications/utilities/postProcessing/graphics/PVReaders
+    Warning: ParaView not found in /opt/OpenFOAM/ThirdParty-9/platforms/linux64Gcc/ParaView-5.6.3. Skipping.
+Allwmake applications/utilities/postProcessing/dataConversion/foamToVTK
+wmake boxTurb
+wmake foamToVTK
+wmake lagrangian
+wmake particleTracks
+wmake refinementLevel
+wmake changeDictionary
+wmake steadyParticleTracks
+wmake refineWallLayer
+wmake removeFaces
+wmake createExternalCoupledPatchGeometry
+wmake miscellaneous
+wmake engineCompRatio
+wmake selectCells
+wmake dsmcInitialise
+wmake smapToFoam
+wmake pdfPlot
+wmake engineSwirl
+wmake splitCells
+wmake faceAgglomerate
+wmake postChannel
+wmake conversion
+wmake ansysToFoam
+wmake cfx4ToFoam
+wmake temporalInterpolate
+wmake foamSetupCHT
+wmake datToFoam
+wmake fluent3DMeshToFoam
+wmake noise
+wmake mapFields
+wmake mapFieldsPar
+wmake fluentMeshToFoam
+wmake postProcess
+wmake surface
+wmake surfaceAdd
+wmake mdInitialise
+wmake foamMeshToFluent
+wmake thermophysical
+wmake adiabaticFlameT
+wmake surfaceAutoPatch
+wmake foamToStarMesh
+wmake setFields
+wmake chemkinToFoam
+wmake chemkinReader
+wmake surfaceBooleanFeatures
+wmake foamToSurface
+wmake setWaves
+wmake equilibriumCO
+wmake gambitToFoam
+wmake surfaceCheck
+wmake viewFactorsGen
+wmake equilibriumFlameT
+wmake gmshToFoam
+wmake gmsh
+wmake surfaceClean
+wmake mixtureAdiabaticFlameT
+wmake surfaceCoarsen
+wmake bunnylod
+wmake ideasUnvToFoam
+wmake surfaceConvert
+wmake unv
+wmake kivaToFoam
+wmake surfaceFeatureConvert
+wmake mshToFoam
+wmake surfaceFeatures
+wmake testFiles
+wmake netgenNeutralToFoam
+wmake surfaceFind
+wmake surfaceHookUp
+wmake plot3dToFoam
+wmake sammToFoam
+wmake generation
+wmake surfaceInertia
+Allwmake applications/utilities/mesh/generation
+wmake blockMesh
+wmake star3ToFoam
+wmake star4ToFoam
+wmake surfaceLambdaMuSmooth
+wmake extrude
+wmake extrudeMesh
+wmake extrudedMesh
+wmake extrudeToRegionMesh
+wmake tetgenToFoam
+wmake surfaceMeshConvert
+wmake manipulation
+wmake attachMesh
+wmake extrude2DMesh
+wmake vtkUnstructuredToFoam
+Allwmake applications/utilities/mesh/generation/extrude2DMesh
+wmake extrude2DMesh
+wmake surfaceMeshConvertTesting
+wmake autoPatch
+wmake writeMeshObj
+wmake surfaceMeshExport
+wmake checkMesh
+wmake createBaffles
+wmake faceSelection
+wmake snappyHexMesh
+wmake surfaceMeshImport
+wmake createPatch
+wmake deformedGeom
+wmake flattenMesh
+wmake insideCells
+wmake surfaceMeshInfo
+wmake mergeBaffles
+wmake mergeMeshes
+wmake surfaceMeshTriangulate
+wmake mirrorMesh
+wmake moveDynamicMesh
+wmake moveEngineMesh
+wmake surfaceOrient
+wmake moveMesh
+wmake objToVTK
+wmake orientFaceZone
+wmake surfacePointMerge
+wmake polyDualMesh
+wmake refineMesh
+wmake renumberMesh
+Allwmake applications/utilities/mesh/manipulation/renumberMesh
+wmake surfaceRedistributePar
+wmake rotateMesh
+wmake setSet
+wmake surfaceRefineRedGreen
+Allwmake applications/utilities/mesh/manipulation/setSet
+    found &lt;readline/readline.h&gt;  --  enabling readline support.
+wmake setsToZones
+wmake surfaceSplitByPatch
+wmake singleCellMesh
+wmake splitBaffles
+wmake splitMesh
+wmake surfaceSplitByTopology
+wmake surfaceSplitNonManifolds
+wmake test
+wmake surfaceSubset
+wmake splitMeshRegions
+wmake surfaceToPatch
+wmake surfaceTransformPoints
+wmake stitchMesh
+wmake subsetMesh
+wmake topoSet
+wmake transformPoints
+wmake zipUpMesh
+</code></pre></div>
+</td></tr></table>
+</details>
+<h3 id="openfoam_2">验证 OpenFOAM</h3>
+<p>控制台输入 <code>interFoam -help</code>，如果输出以下相似内容，说明安装成功。
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>Usage: interFoam [OPTIONS]
+options:
+  -case &lt;dir&gt;       specify alternate case directory, default is the cwd
+  -fileHandler &lt;handler&gt;
+                    override the fileHandler
+  -hostRoots &lt;(((host1 dir1) .. (hostN dirN))&gt;
+                    slave root directories (per host) for distributed running
+  -libs &lt;(lib1 .. libN)&gt;
+                    pre-load libraries
+  -listFunctionObjects
+                    List functionObjects
+  -listFvConstraints
+                    List fvConstraints
+  -listFvModels     List fvModels
+  -listMomentumTransportModels
+                    List momentumTransportModels
+  -listScalarBCs    List scalar field boundary conditions (fvPatchField&lt;scalar&gt;)
+  -listSwitches     List all available debug, info and optimisation switches
+  -listVectorBCs    List vector field boundary conditions (fvPatchField&lt;vector&gt;)
+  -noFunctionObjects
+                    do not execute functionObjects
+  -parallel         run in parallel
+  -postProcess      Execute functionObjects only
+  -roots &lt;(dir1 .. dirN)&gt;
+                    slave root directories for distributed running
+  -srcDoc           display source code in browser
+  -doc              display application documentation in browser
+  -help             print the usage
+
+Using: OpenFOAM-9 (see https://openfoam.org)
+Build: 9-8cd2ea29e64f
+</code></pre></div>
+</td></tr></table></p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: 💾The Economics of Open Source" class="md-footer__link md-footer__link--prev" href="../12/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              💾The Economics of Open Source
+            </div>
+</div>
+</a>
+<a aria-label="Next: 简单禁用打印、复制，自动虚化" class="md-footer__link md-footer__link--next" href="../10/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              简单禁用打印、复制，自动虚化
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
+<script src="../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>

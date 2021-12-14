@@ -1,0 +1,2106 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/image/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-8.0.2" name="generator"/>
+<title>CS:GO 配置文件 - Iydon's Blog</title>
+<link href="../../assets/stylesheets/main.816931ca.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.9204c3b2.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Iydon's Blog" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Iydon's Blog">
+<img alt="logo" src="../../assets/image/favicon.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Iydon's Blog
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              CS:GO 配置文件
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tags.html">
+      Tags
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../lts/1/">
+        LTS
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../25/">
+        Year 2021
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Iydon's Blog" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Iydon's Blog">
+<img alt="logo" src="../../assets/image/favicon.png"/>
+</a>
+    Iydon's Blog
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tags.html">
+        Tags
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          LTS
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="LTS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          LTS
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/1/">
+        诗词歌赋
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/2/">
+        知乎收藏夹整理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/3/">
+        哔哩哔哩收藏夹整理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/4/">
+        Doki Doki Literature Club!
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/5/">
+        Markdown 特性
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Year 2021
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Year 2021" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Year 2021
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1">
+          December
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="December" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+          December
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../25/">
+        💾中文文案排版指北
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../24/">
+        💾对开发人员有用的定律、理论、原则和模式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../23/">
+        Low-Poly 风格化照片
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../22/">
+        💾How to Disagree
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../21/">
+        【简介】工程应用中的机器学习
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../20/">
+        【21-12】上月总结与本月规划
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2">
+          November
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="November" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          November
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../19/">
+        Apache 映射子域名到特定文件夹
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../18/">
+        在 Rust 中使用过程宏模拟 Python 缩进语法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../17/">
+        Jupyter Notebook 测试
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../16/">
+        Codeforces 个人工具
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+        CS:GO 配置文件
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../14/">
+        Mermaid
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../13/">
+        名探偵コナン主线汇总
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../12/">
+        💾The Economics of Open Source
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../11/">
+        OpenFOAM 安装
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../10/">
+        简单禁用打印、复制，自动虚化
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../9/">
+        🔒博客加密测试
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../8/">
+        RapidCFD 安装
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../7/">
+        PDF 转图片
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../6/">
+        Overleaf 上使用中文
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../5/">
+        图片压缩
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../4/">
+        【21-11】上月总结与本月规划
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3">
+          October
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="October" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          October
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../3/">
+        Nuitka 初探
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../2/">
+        WebAssembly 初探
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1/">
+        创世纪
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>CS:GO 配置文件</h1>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><input id="__tabbed_1_4" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">csgo.cfg</label><label for="__tabbed_1_2">ent_fire_weapon_knife.cfg</label><label for="__tabbed_1_3">practice.cfg</label><label for="__tabbed_1_4">practice_extension.nut</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span>
+<span class="normal">152</span>
+<span class="normal">153</span>
+<span class="normal">154</span>
+<span class="normal">155</span>
+<span class="normal">156</span>
+<span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span>
+<span class="normal">164</span>
+<span class="normal">165</span>
+<span class="normal">166</span>
+<span class="normal">167</span>
+<span class="normal">168</span>
+<span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span>
+<span class="normal">176</span>
+<span class="normal">177</span>
+<span class="normal">178</span>
+<span class="normal">179</span>
+<span class="normal">180</span>
+<span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span>
+<span class="normal">188</span>
+<span class="normal">189</span>
+<span class="normal">190</span>
+<span class="normal">191</span>
+<span class="normal">192</span>
+<span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span>
+<span class="normal">200</span>
+<span class="normal">201</span>
+<span class="normal">202</span>
+<span class="normal">203</span>
+<span class="normal">204</span>
+<span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span>
+<span class="normal">212</span>
+<span class="normal">213</span>
+<span class="normal">214</span>
+<span class="normal">215</span>
+<span class="normal">216</span>
+<span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span>
+<span class="normal">224</span>
+<span class="normal">225</span>
+<span class="normal">226</span>
+<span class="normal">227</span>
+<span class="normal">228</span>
+<span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span>
+<span class="normal">236</span>
+<span class="normal">237</span>
+<span class="normal">238</span>
+<span class="normal">239</span>
+<span class="normal">240</span>
+<span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span>
+<span class="normal">248</span>
+<span class="normal">249</span>
+<span class="normal">250</span>
+<span class="normal">251</span>
+<span class="normal">252</span>
+<span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span>
+<span class="normal">265</span>
+<span class="normal">266</span>
+<span class="normal">267</span>
+<span class="normal">268</span>
+<span class="normal">269</span>
+<span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span>
+<span class="normal">284</span>
+<span class="normal">285</span>
+<span class="normal">286</span>
+<span class="normal">287</span>
+<span class="normal">288</span>
+<span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span>
+<span class="normal">301</span>
+<span class="normal">302</span>
+<span class="normal">303</span>
+<span class="normal">304</span>
+<span class="normal">305</span>
+<span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span>
+<span class="normal">313</span>
+<span class="normal">314</span>
+<span class="normal">315</span>
+<span class="normal">316</span>
+<span class="normal">317</span>
+<span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span>
+<span class="normal">331</span>
+<span class="normal">332</span>
+<span class="normal">333</span>
+<span class="normal">334</span>
+<span class="normal">335</span>
+<span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span>
+<span class="normal">345</span>
+<span class="normal">346</span>
+<span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span>
+<span class="normal">377</span>
+<span class="normal">378</span>
+<span class="normal">379</span>
+<span class="normal">380</span>
+<span class="normal">381</span>
+<span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span>
+<span class="normal">398</span>
+<span class="normal">399</span>
+<span class="normal">400</span>
+<span class="normal">401</span>
+<span class="normal">402</span>
+<span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span>
+<span class="normal">419</span>
+<span class="normal">420</span>
+<span class="normal">421</span>
+<span class="normal">422</span>
+<span class="normal">423</span>
+<span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span>
+<span class="normal">436</span>
+<span class="normal">437</span>
+<span class="normal">438</span>
+<span class="normal">439</span>
+<span class="normal">440</span>
+<span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span>
+<span class="normal">451</span>
+<span class="normal">452</span>
+<span class="normal">453</span>
+<span class="normal">454</span>
+<span class="normal">455</span>
+<span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span>
+<span class="normal">463</span>
+<span class="normal">464</span>
+<span class="normal">465</span>
+<span class="normal">466</span>
+<span class="normal">467</span>
+<span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span>
+<span class="normal">475</span>
+<span class="normal">476</span>
+<span class="normal">477</span>
+<span class="normal">478</span>
+<span class="normal">479</span>
+<span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span>
+<span class="normal">487</span>
+<span class="normal">488</span>
+<span class="normal">489</span>
+<span class="normal">490</span>
+<span class="normal">491</span>
+<span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span>
+<span class="normal">499</span>
+<span class="normal">500</span>
+<span class="normal">501</span>
+<span class="normal">502</span>
+<span class="normal">503</span>
+<span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span>
+<span class="normal">514</span>
+<span class="normal">515</span>
+<span class="normal">516</span>
+<span class="normal">517</span>
+<span class="normal">518</span>
+<span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span>
+<span class="normal">528</span>
+<span class="normal">529</span>
+<span class="normal">530</span>
+<span class="normal">531</span>
+<span class="normal">532</span>
+<span class="normal">533</span>
+<span class="normal">534</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
+<span class="normal">537</span>
+<span class="normal">538</span>
+<span class="normal">539</span>
+<span class="normal">540</span>
+<span class="normal">541</span>
+<span class="normal">542</span>
+<span class="normal">543</span>
+<span class="normal">544</span>
+<span class="normal">545</span>
+<span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span>
+<span class="normal">549</span>
+<span class="normal">550</span>
+<span class="normal">551</span>
+<span class="normal">552</span>
+<span class="normal">553</span>
+<span class="normal">554</span>
+<span class="normal">555</span>
+<span class="normal">556</span>
+<span class="normal">557</span>
+<span class="normal">558</span>
+<span class="normal">559</span>
+<span class="normal">560</span>
+<span class="normal">561</span>
+<span class="normal">562</span>
+<span class="normal">563</span>
+<span class="normal">564</span>
+<span class="normal">565</span>
+<span class="normal">566</span>
+<span class="normal">567</span>
+<span class="normal">568</span>
+<span class="normal">569</span>
+<span class="normal">570</span>
+<span class="normal">571</span>
+<span class="normal">572</span>
+<span class="normal">573</span>
+<span class="normal">574</span>
+<span class="normal">575</span>
+<span class="normal">576</span>
+<span class="normal">577</span>
+<span class="normal">578</span>
+<span class="normal">579</span>
+<span class="normal">580</span>
+<span class="normal">581</span>
+<span class="normal">582</span>
+<span class="normal">583</span>
+<span class="normal">584</span>
+<span class="normal">585</span>
+<span class="normal">586</span>
+<span class="normal">587</span>
+<span class="normal">588</span>
+<span class="normal">589</span>
+<span class="normal">590</span>
+<span class="normal">591</span>
+<span class="normal">592</span>
+<span class="normal">593</span>
+<span class="normal">594</span>
+<span class="normal">595</span>
+<span class="normal">596</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>unbindall
+<span class="nb">bind</span> <span class="s2">"0"</span> <span class="s2">"slot10"</span>
+<span class="nb">bind</span> <span class="s2">"1"</span> <span class="s2">"slot1"</span>
+<span class="nb">bind</span> <span class="s2">"2"</span> <span class="s2">"slot2"</span>
+<span class="nb">bind</span> <span class="s2">"3"</span> <span class="s2">"slot3"</span>
+<span class="nb">bind</span> <span class="s2">"4"</span> <span class="s2">"slot4"</span>
+<span class="nb">bind</span> <span class="s2">"5"</span> <span class="s2">"slot5"</span>
+<span class="nb">bind</span> <span class="s2">"6"</span> <span class="s2">"slot6"</span>
+<span class="nb">bind</span> <span class="s2">"7"</span> <span class="s2">"slot7"</span>
+<span class="nb">bind</span> <span class="s2">"8"</span> <span class="s2">"slot8"</span>
+<span class="nb">bind</span> <span class="s2">"9"</span> <span class="s2">"slot9"</span>
+<span class="nb">bind</span> <span class="s2">"a"</span> <span class="s2">"+moveleft"</span>
+<span class="nb">bind</span> <span class="s2">"b"</span> <span class="s2">"buymenu"</span>
+<span class="nb">bind</span> <span class="s2">"c"</span> <span class="s2">"+voicerecord"</span>
+<span class="nb">bind</span> <span class="s2">"d"</span> <span class="s2">"+moveright"</span>
+<span class="nb">bind</span> <span class="s2">"e"</span> <span class="s2">"+use"</span>
+<span class="nb">bind</span> <span class="s2">"f"</span> <span class="s2">"+my_inspect"</span>
+    <span class="nb">alias</span> <span class="s2">"+my_inspect"</span> <span class="s2">"-lookatweapon ; +reload"</span>
+    <span class="nb">alias</span> <span class="s2">"-my_inspect"</span> <span class="s2">"+lookatweapon ; -reload"</span>
+<span class="nb">bind</span> <span class="s2">"g"</span> <span class="s2">"drop"</span>
+<span class="nb">bind</span> <span class="s2">"h"</span> <span class="s2">"+jumpthrow"</span>
+    <span class="nb">alias</span> <span class="s2">"+jumpthrow"</span> <span class="s2">"+jump;-attack;-attack2"</span>
+    <span class="nb">alias</span> <span class="s2">"-jumpthrow"</span> <span class="s2">"-jump"</span>
+<span class="nb">bind</span> <span class="s2">"i"</span> <span class="s2">"show_loadout_toggle"</span>
+<span class="nb">bind</span> <span class="s2">"m"</span> <span class="s2">"teammenu"</span>
+<span class="nb">bind</span> <span class="s2">"q"</span> <span class="s2">"+my_lastinv"</span>
+    <span class="nb">alias</span> <span class="s2">"+my_lastinv"</span> <span class="s2">"lastinv"</span>
+    <span class="nb">alias</span> <span class="s2">"-my_lastinv"</span> <span class="s2">"lastinv"</span>
+<span class="nb">bind</span> <span class="s2">"r"</span> <span class="s2">"+reload"</span>
+<span class="nb">bind</span> <span class="s2">"s"</span> <span class="s2">"+back"</span>
+<span class="nb">bind</span> <span class="s2">"t"</span> <span class="s2">"+spray_menu"</span>
+<span class="nb">bind</span> <span class="s2">"u"</span> <span class="s2">"messagemode2"</span>
+<span class="nb">bind</span> <span class="s2">"v"</span> <span class="s2">"toggle cl_righthand 0 1"</span>
+<span class="nb">bind</span> <span class="s2">"w"</span> <span class="s2">"+forward"</span>
+<span class="nb">bind</span> <span class="s2">"x"</span> <span class="s2">"+radialradio"</span>
+<span class="nb">bind</span> <span class="s2">"y"</span> <span class="s2">"messagemode"</span>
+<span class="nb">bind</span> <span class="s2">"z"</span> <span class="s2">"radio"</span>
+<span class="nb">bind</span> <span class="s2">"`"</span> <span class="s2">"toggleconsole"</span>
+<span class="nb">bind</span> <span class="s2">"."</span> <span class="s2">"exec practice"</span>
+<span class="nb">bind</span> <span class="s2">"/"</span> <span class="s2">"exec hlae"</span>
+<span class="nb">bind</span> <span class="s2">"SPACE"</span> <span class="s2">"+jump"</span>
+<span class="nb">bind</span> <span class="s2">"TAB"</span> <span class="s2">"+my_shownet"</span>
+    <span class="nb">alias</span> <span class="s2">"+my_shownet"</span> <span class="s2">"+showscores ; net_graph 1 ; cl_showpos 1"</span>
+    <span class="nb">alias</span> <span class="s2">"-my_shownet"</span> <span class="s2">"-showscores ; net_graph 0 ; cl_showpos 0"</span>
+<span class="nb">bind</span> <span class="s2">"ESCAPE"</span> <span class="s2">"cancelselect"</span>
+<span class="nb">bind</span> <span class="s2">"DEL"</span> <span class="s2">"mute"</span>
+<span class="nb">bind</span> <span class="s2">"PAUSE"</span> <span class="s2">"pause"</span>
+<span class="nb">bind</span> <span class="s2">"SHIFT"</span> <span class="s2">"+speed;r_cleardecals"</span>
+<span class="nb">bind</span> <span class="s2">"CTRL"</span> <span class="s2">"+duck"</span>
+<span class="nb">bind</span> <span class="s2">"F3"</span> <span class="s2">"autobuy"</span>
+<span class="nb">bind</span> <span class="s2">"F4"</span> <span class="s2">"rebuy"</span>
+<span class="nb">bind</span> <span class="s2">"F5"</span> <span class="s2">"jpeg"</span>
+<span class="nb">bind</span> <span class="s2">"F6"</span> <span class="s2">"save quick"</span>
+<span class="nb">bind</span> <span class="s2">"F7"</span> <span class="s2">"load quick"</span>
+<span class="nb">bind</span> <span class="s2">"F10"</span> <span class="s2">"quit prompt"</span>
+<span class="nb">bind</span> <span class="s2">"MOUSE1"</span> <span class="s2">"+attack"</span>
+<span class="nb">bind</span> <span class="s2">"MOUSE2"</span> <span class="s2">"+attack2"</span>
+<span class="nb">bind</span> <span class="s2">"MOUSE3"</span> <span class="s2">"player_ping"</span>
+<span class="nb">bind</span> <span class="s2">"MOUSE4"</span> <span class="s2">"voicerecord"</span>
+<span class="nb">bind</span> <span class="s2">"MOUSE5"</span> <span class="s2">"+voicerecord"</span>
+<span class="nb">bind</span> <span class="s2">"MWHEELUP"</span> <span class="s2">"+jump"</span>
+<span class="nb">bind</span> <span class="s2">"MWHEELDOWN"</span> <span class="s2">"+jump"</span>
+<span class="nb">bind</span> <span class="s2">"kp_ins"</span> <span class="s2">"kill"</span>
+<span class="nb">bind</span> <span class="s2">"kp_end"</span> <span class="s2">"map de_dust2"</span>
+<span class="nb">bind</span> <span class="s2">"kp_downarrow"</span> <span class="s2">"map de_mirage"</span>
+<span class="nb">bind</span> <span class="s2">"kp_pgdn"</span> <span class="s2">"map de_inferno"</span>
+@panorama_debug_overlay_opacity <span class="s2">"0.8"</span>
+adsp_debug <span class="s2">"0"</span>
+ai_report_task_timings_on_limit <span class="s2">"0"</span>
+ai_think_limit_label <span class="s2">"0"</span>
+budget_averages_window <span class="s2">"30"</span>
+budget_background_alpha <span class="s2">"128"</span>
+budget_bargraph_background_alpha <span class="s2">"128"</span>
+budget_bargraph_range_ms <span class="s2">"16.6666666667"</span>
+budget_history_numsamplesvisible <span class="s2">"100"</span>
+budget_history_range_ms <span class="s2">"66.666666667"</span>
+budget_panel_bottom_of_history_fraction <span class="s2">".25"</span>
+budget_panel_height <span class="s2">"384"</span>
+budget_panel_width <span class="s2">"512"</span>
+budget_panel_x <span class="s2">"0"</span>
+budget_panel_y <span class="s2">"50"</span>
+budget_peaks_window <span class="s2">"30"</span>
+budget_show_averages <span class="s2">"0"</span>
+budget_show_history <span class="s2">"1"</span>
+budget_show_peaks <span class="s2">"1"</span>
+bugreporter_uploadasync <span class="s2">"0"</span>
+bugreporter_username <span class="s2">""</span>
+c_maxdistance <span class="s2">"200"</span>
+c_maxpitch <span class="s2">"90"</span>
+c_maxyaw <span class="s2">"135"</span>
+c_mindistance <span class="s2">"30"</span>
+c_minpitch <span class="s2">"0"</span>
+c_minyaw <span class="s2">"-135"</span>
+c_orthoheight <span class="s2">"100"</span>
+c_orthowidth <span class="s2">"100"</span>
+c_thirdpersonshoulder <span class="s2">"false"</span>
+c_thirdpersonshoulderaimdist <span class="s2">"120.0"</span>
+c_thirdpersonshoulderdist <span class="s2">"40.0"</span>
+c_thirdpersonshoulderheight <span class="s2">"5.0"</span>
+c_thirdpersonshoulderoffset <span class="s2">"20.0"</span>
+cachedvalue_count_partybrowser <span class="s2">"1607653649"</span>
+cachedvalue_count_teammates <span class="s2">"1607835657"</span>
+cam_collision <span class="s2">"1"</span>
+cam_idealdelta <span class="s2">"4.0"</span>
+cam_idealdist <span class="s2">"150"</span>
+cam_idealdistright <span class="s2">"0"</span>
+cam_idealdistup <span class="s2">"0"</span>
+cam_ideallag <span class="s2">"4.0"</span>
+cam_idealpitch <span class="s2">"0"</span>
+cam_idealyaw <span class="s2">"0"</span>
+cam_snapto <span class="s2">"0"</span>
+cc_lang <span class="s2">""</span>
+cc_linger_time <span class="s2">"1.0"</span>
+cc_predisplay_time <span class="s2">"0.25"</span>
+cc_subtitles <span class="s2">"0"</span>
+chet_debug_idle <span class="s2">"0"</span>
+cl_allowdownload <span class="s2">"1"</span>
+cl_allowupload <span class="s2">"1"</span>
+cl_autohelp <span class="s2">"1"</span>
+cl_autowepswitch <span class="s2">"0"</span>
+cl_bob_lower_amt <span class="s2">"21"</span>
+cl_bobamt_lat <span class="s2">"0.33"</span>
+cl_bobamt_vert <span class="s2">"0.14"</span>
+cl_bobcycle <span class="s2">"0.98"</span>
+cl_buywheel_nomousecentering <span class="s2">"0"</span>
+cl_buywheel_nonumberpurchasing <span class="s2">"0"</span>
+cl_chatfilter_version <span class="s2">"1"</span>
+cl_chatfilters <span class="s2">"63"</span>
+cl_cmdrate <span class="s2">"64"</span>
+cl_color <span class="s2">"3"</span>
+cl_compass_enabled <span class="s2">"1"</span>
+cl_crosshair_drawoutline <span class="s2">"0"</span>
+cl_crosshair_dynamic_maxdist_splitratio <span class="s2">"0.300000"</span>
+cl_crosshair_dynamic_splitalpha_innermod <span class="s2">"1"</span>
+cl_crosshair_dynamic_splitalpha_outermod <span class="s2">"0.5"</span>
+cl_crosshair_dynamic_splitdist <span class="s2">"7"</span>
+cl_crosshair_friendly_warning <span class="s2">"2"</span>
+cl_crosshair_outlinethickness <span class="s2">"1"</span>
+cl_crosshair_sniper_show_normal_inaccuracy <span class="s2">"0"</span>
+cl_crosshair_sniper_width <span class="s2">"1"</span>
+cl_crosshair_t <span class="s2">"0"</span>
+cl_crosshairalpha <span class="s2">"255"</span>
+cl_crosshaircolor <span class="s2">"4"</span>
+cl_crosshaircolor_b <span class="s2">"255"</span>
+cl_crosshaircolor_g <span class="s2">"0"</span>
+cl_crosshaircolor_r <span class="s2">"1"</span>
+cl_crosshairdot <span class="s2">"1"</span>
+cl_crosshairgap <span class="s2">"-2.000000"</span>
+cl_crosshairgap_useweaponvalue <span class="s2">"0"</span>
+cl_crosshairsize <span class="s2">"1.000000"</span>
+cl_crosshairstyle <span class="s2">"5"</span>
+cl_crosshairthickness <span class="s2">"0.000000"</span>
+cl_crosshairusealpha <span class="s2">"1"</span>
+cl_debugrumble <span class="s2">"0"</span>
+cl_detail_avoid_force <span class="s2">"0.4"</span>
+cl_detail_avoid_radius <span class="s2">"64"</span>
+cl_detail_avoid_recover_speed <span class="s2">"0.25"</span>
+cl_detail_max_sway <span class="s2">"5"</span>
+cl_disable_round_end_report <span class="s2">"0"</span>
+cl_disablefreezecam <span class="s2">"0"</span>
+cl_disablehtmlmotd <span class="s2">"0"</span>
+cl_dm_buyrandomweapons <span class="s2">"0"</span>
+cl_downloadfilter <span class="s2">"all"</span>
+cl_dz_playagain_auto_spectate <span class="s2">"0"</span>
+cl_embedded_stream_audio_volume <span class="s2">"60"</span>
+cl_embedded_stream_audio_volume_xmaster <span class="s2">"1"</span>
+cl_fixedcrosshairgap <span class="s2">"3"</span>
+cl_forcepreload <span class="s2">"0"</span>
+cl_freezecampanel_position_dynamic <span class="s2">"1"</span>
+cl_grass_mip_bias <span class="s2">"-0.5"</span>
+cl_hide_avatar_images <span class="s2">""</span>
+cl_hud_background_alpha <span class="s2">"0.5"</span>
+cl_hud_bomb_under_radar <span class="s2">"0"</span>
+cl_hud_color <span class="s2">"10"</span>
+cl_hud_healthammo_style <span class="s2">"1"</span>
+cl_hud_playercount_pos <span class="s2">"0"</span>
+cl_hud_playercount_showcount <span class="s2">"1"</span>
+cl_hud_radar_scale <span class="s2">"1.3"</span>
+cl_idealpitchscale <span class="s2">"0.8"</span>
+cl_inventory_saved_filter2 <span class="s2">"all"</span>
+cl_inventory_saved_sort2 <span class="s2">"inv_sort_age"</span>
+cl_invites_only_friends <span class="s2">"0"</span>
+cl_invites_only_mainmenu <span class="s2">"0"</span>
+cl_itemimages_dynamically_generated <span class="s2">"2"</span>
+cl_join_advertise <span class="s2">"1"</span>
+cl_minimal_rtt_shadows <span class="s2">"1"</span>
+cl_mouselook <span class="s2">"1"</span>
+cl_mute_all_but_friends_and_party <span class="s2">"0"</span>
+cl_mute_enemy_team <span class="s2">"0"</span>
+cl_obs_interp_enable <span class="s2">"1"</span>
+cl_observed_bot_crosshair <span class="s2">"0"</span>
+cl_observercrosshair <span class="s2">"1"</span>
+cl_ping_fade_deadzone <span class="s2">"60"</span>
+cl_ping_fade_distance <span class="s2">"300"</span>
+cl_player_ping_mute <span class="s2">"0"</span>
+cl_playerspray_auto_apply <span class="s2">"1"</span>
+cl_promoted_settings_acknowledged <span class="s2">"1:1607035830373"</span>
+cl_quickinventory_lastinv <span class="s2">"1"</span>
+cl_quickinventory_line_update_speed <span class="s2">"65.0f"</span>
+cl_radar_always_centered <span class="s2">"0"</span>
+cl_radar_icon_scale_min <span class="s2">"0.4"</span>
+cl_radar_rotate <span class="s2">"1"</span>
+cl_radar_scale <span class="s2">"0.4"</span>
+cl_radar_square_with_scoreboard <span class="s2">"1"</span>
+cl_radial_radio_tab_0_text_1 <span class="s2">"#Chatwheel_sectorclear"</span>
+cl_radial_radio_tab_0_text_2 <span class="s2">"#Chatwheel_youfixbomb"</span>
+cl_radial_radio_tab_0_text_3 <span class="s2">"#Chatwheel_bombcarrierspotted"</span>
+cl_radial_radio_tab_0_text_4 <span class="s2">"#Chatwheel_needbackup"</span>
+cl_radial_radio_tab_0_text_5 <span class="s2">"#Chatwheel_holdposition"</span>
+cl_radial_radio_tab_0_text_6 <span class="s2">"#Chatwheel_sorry"</span>
+cl_radial_radio_tab_0_text_7 <span class="s2">"#Chatwheel_cheer"</span>
+cl_radial_radio_tab_0_text_8 <span class="s2">"#Chatwheel_guardingbomb"</span>
+cl_radial_radio_tab_1_text_1 <span class="s2">"#Chatwheel_enemyspotted"</span>
+cl_radial_radio_tab_1_text_2 <span class="s2">"#Chatwheel_needbackup"</span>
+cl_radial_radio_tab_1_text_3 <span class="s2">"#Chatwheel_bplan"</span>
+cl_radial_radio_tab_1_text_4 <span class="s2">"#Chatwheel_bombcarrierspotted"</span>
+cl_radial_radio_tab_1_text_5 <span class="s2">"#Chatwheel_multipleenemieshere"</span>
+cl_radial_radio_tab_1_text_6 <span class="s2">"#Chatwheel_sniperspotted"</span>
+cl_radial_radio_tab_1_text_7 <span class="s2">"#Chatwheel_aplan"</span>
+cl_radial_radio_tab_1_text_8 <span class="s2">"#Chatwheel_inposition"</span>
+cl_radial_radio_tab_2_text_1 <span class="s2">"#Chatwheel_affirmative"</span>
+cl_radial_radio_tab_2_text_2 <span class="s2">"#Chatwheel_negative"</span>
+cl_radial_radio_tab_2_text_3 <span class="s2">"#Chatwheel_compliment"</span>
+cl_radial_radio_tab_2_text_4 <span class="s2">"#Chatwheel_thanks"</span>
+cl_radial_radio_tab_2_text_5 <span class="s2">"#Chatwheel_cheer"</span>
+cl_radial_radio_tab_2_text_6 <span class="s2">"#Chatwheel_peptalk"</span>
+cl_radial_radio_tab_2_text_7 <span class="s2">"#Chatwheel_sorry"</span>
+cl_radial_radio_tab_2_text_8 <span class="s2">"#Chatwheel_sectorclear"</span>
+cl_radial_radio_version_reset <span class="s2">"12"</span>
+cl_radialmenu_deadzone_size <span class="s2">"0.04"</span>
+cl_righthand <span class="s2">"1"</span>
+cl_rumblescale <span class="s2">"1.0"</span>
+cl_sanitize_player_names <span class="s2">"0"</span>
+cl_scoreboard_mouse_enable_binding <span class="s2">"+attack2"</span>
+cl_scoreboard_survivors_always_on <span class="s2">"0"</span>
+cl_show_clan_in_death_notice <span class="s2">"1"</span>
+cl_show_observer_crosshair <span class="s2">"2"</span>
+cl_showhelp <span class="s2">"1"</span>
+cl_showloadout <span class="s2">"0"</span>
+cl_showpluginmessages2 <span class="s2">"0"</span>
+cl_sniper_delay_unscope <span class="s2">"0"</span>
+cl_spec_follow_grenade_key <span class="s2">"0"</span>
+cl_spec_mode <span class="s2">"4"</span>
+cl_tablet_mapmode <span class="s2">"1"</span>
+cl_teamid_overhead_mode <span class="s2">"2"</span>
+cl_teammate_colors_show <span class="s2">"1"</span>
+cl_thirdperson <span class="s2">"0"</span>
+cl_timeout <span class="s2">"30"</span>
+cl_updaterate <span class="s2">"64.000000"</span>
+cl_use_opens_buy_menu <span class="s2">"1"</span>
+cl_versus_intro <span class="s2">"1"</span>
+cl_viewmodel_shift_left_amt <span class="s2">"1.5"</span>
+cl_viewmodel_shift_right_amt <span class="s2">"0.75"</span>
+closecaption <span class="s2">"0"</span>
+closeonbuy <span class="s2">"0"</span>
+commentary_firstrun <span class="s2">"0"</span>
+con_allownotify <span class="s2">"1"</span>
+con_enable <span class="s2">"1"</span>
+crosshair <span class="s2">"1"</span>
+demo_index <span class="s2">"0"</span>
+demo_index_max_other <span class="s2">"500"</span>
+dsp_enhance_stereo <span class="s2">"0"</span>
+engine_no_focus_sleep <span class="s2">"50"</span>
+force_audio_english <span class="s2">"0"</span>
+func_break_max_pieces <span class="s2">"15"</span>
+g15_update_msec <span class="s2">"250"</span>
+gameinstructor_enable <span class="s2">"1"</span>
+hud_scaling <span class="s2">"0.750000"</span>
+hud_showtargetid <span class="s2">"1"</span>
+hud_takesshots <span class="s2">"0"</span>
+joy_accelmax <span class="s2">"1.0"</span>
+joy_accelscale <span class="s2">"3.5"</span>
+joy_accelscalepoly <span class="s2">"0.4"</span>
+joy_advanced <span class="s2">"0"</span>
+joy_advaxisr <span class="s2">"0"</span>
+joy_advaxisu <span class="s2">"0"</span>
+joy_advaxisv <span class="s2">"0"</span>
+joy_advaxisx <span class="s2">"0"</span>
+joy_advaxisy <span class="s2">"0"</span>
+joy_advaxisz <span class="s2">"0"</span>
+joy_autoaimdampen <span class="s2">"0"</span>
+joy_autoAimDampenMethod <span class="s2">"0"</span>
+joy_autoaimdampenrange <span class="s2">"0"</span>
+joy_axisbutton_threshold <span class="s2">"0.3"</span>
+joy_cfg_preset <span class="s2">"1"</span>
+joy_circle_correct <span class="s2">"1"</span>
+joy_curvepoint_1 <span class="s2">"0.001"</span>
+joy_curvepoint_2 <span class="s2">"0.4"</span>
+joy_curvepoint_3 <span class="s2">"0.75"</span>
+joy_curvepoint_4 <span class="s2">"1"</span>
+joy_curvepoint_end <span class="s2">"2"</span>
+joy_diagonalpov <span class="s2">"0"</span>
+joy_display_input <span class="s2">"0"</span>
+joy_forwardsensitivity <span class="s2">"-1"</span>
+joy_forwardthreshold <span class="s2">"0.15"</span>
+joy_gamma <span class="s2">"0.2"</span>
+joy_inverty <span class="s2">"0"</span>
+joy_lowend <span class="s2">"1"</span>
+joy_lowend_linear <span class="s2">"0.55"</span>
+joy_lowmap <span class="s2">"1"</span>
+joy_movement_stick <span class="s2">"0"</span>
+joy_name <span class="s2">"joystick"</span>
+joy_no_accel_jump <span class="s2">"0"</span>
+joy_pitchsensitivity <span class="s2">"-1"</span>
+joy_pitchthreshold <span class="s2">"0.15"</span>
+joy_response_look <span class="s2">"0"</span>
+joy_response_look_pitch <span class="s2">"1"</span>
+joy_response_move <span class="s2">"1"</span>
+joy_sensitive_step0 <span class="s2">"0.1"</span>
+joy_sensitive_step1 <span class="s2">"0.4"</span>
+joy_sensitive_step2 <span class="s2">"0.90"</span>
+joy_sidesensitivity <span class="s2">"1"</span>
+joy_sidethreshold <span class="s2">"0.15"</span>
+joy_wingmanwarrior_centerhack <span class="s2">"0"</span>
+joy_wingmanwarrior_turnhack <span class="s2">"0"</span>
+joy_yawsensitivity <span class="s2">"-1"</span>
+joy_yawthreshold <span class="s2">"0.15"</span>
+joystick <span class="s2">"1"</span>
+joystick_force_disabled <span class="s2">"1"</span>
+joystick_force_disabled_set_from_options <span class="s2">"1"</span>
+key_bind_version <span class="s2">"5"</span>
+lobby_default_privacy_bits2 <span class="s2">"1"</span>
+lockMoveControllerRet <span class="s2">"0"</span>
+lookspring <span class="s2">"0"</span>
+lookstrafe <span class="s2">"0"</span>
+m_customaccel <span class="s2">"0"</span>
+m_customaccel_exponent <span class="s2">"1.05"</span>
+m_customaccel_max <span class="s2">"0"</span>
+m_customaccel_scale <span class="s2">"0.04"</span>
+m_forward <span class="s2">"1"</span>
+m_mouseaccel1 <span class="s2">"0"</span>
+m_mouseaccel2 <span class="s2">"0"</span>
+m_mousespeed <span class="s2">"1"</span>
+m_pitch <span class="s2">"0.022"</span>
+m_rawinput <span class="s2">"0"</span>
+m_side <span class="s2">"0.8"</span>
+m_yaw <span class="s2">"0.022"</span>
+mapoverview_icon_scale <span class="s2">"1.0"</span>
+mat_enable_uber_shaders <span class="s2">"1"</span>
+mat_monitorgamma <span class="s2">"2.2"</span>
+mat_monitorgamma_tv_enabled <span class="s2">"0"</span>
+mat_powersavingsmode <span class="s2">"0"</span>
+mat_queue_report <span class="s2">"0"</span>
+mat_spewalloc <span class="s2">"0"</span>
+mat_texture_list_content_path <span class="s2">""</span>
+mc_accel_band_size <span class="s2">"0.5"</span>
+mc_dead_zone_radius <span class="s2">"0.06"</span>
+mc_max_pitchrate <span class="s2">"100.0"</span>
+mc_max_yawrate <span class="s2">"230.0"</span>
+mm_csgo_community_search_players_min <span class="s2">"3"</span>
+mm_dedicated_search_maxping <span class="s2">"150"</span>
+mm_server_search_lan_ports <span class="s2">"27015,27016,27017,27018,27019,27020"</span>
+muzzleflash_light <span class="s2">"1"</span>
+name <span class="s2">"iydon"</span>
+net_allow_multicast <span class="s2">"1"</span>
+net_graph <span class="s2">"0"</span>
+net_graphheight <span class="s2">"64"</span>
+net_graphholdsvframerate <span class="s2">"0"</span>
+net_graphipc <span class="s2">"0"</span>
+net_graphmsecs <span class="s2">"400"</span>
+net_graphpos <span class="s2">"1"</span>
+net_graphproportionalfont <span class="s2">"1"</span>
+net_graphshowinterp <span class="s2">"1"</span>
+net_graphshowlatency <span class="s2">"1"</span>
+net_graphshowsvframerate <span class="s2">"0"</span>
+net_graphsolid <span class="s2">"1"</span>
+net_graphtext <span class="s2">"1"</span>
+net_maxroutable <span class="s2">"1200"</span>
+net_scale <span class="s2">"5"</span>
+net_steamcnx_allowrelay <span class="s2">"1"</span>
+npc_height_adjust <span class="s2">"1"</span>
+option_duck_method <span class="s2">"0"</span>
+option_speed_method <span class="s2">"0"</span>
+password <span class="s2">"843B51A9244F1D59969C9CE6C1CE88BF37FA72475C5FADDD694E42DBE150EA53"</span>
+play_distance <span class="s2">"1"</span>
+player_botdifflast_s <span class="s2">"5"</span>
+player_competitive_maplist_2v2_9_1_EB331822 <span class="s2">"mg_de_guard,mg_de_elysion,mg_de_vertigo,mg_de_inferno,mg_de_overpass,mg_de_cbble,mg_de_train,mg_de_shortnuke,mg_de_shortdust,mg_de_lake"</span>
+player_competitive_maplist_8_9_1_73271C88 <span class="s2">"mg_de_overpass,mg_de_vertigo,mg_de_nuke,mg_de_train,mg_de_dust2,mg_de_anubis,mg_de_cache,mg_cs_agency,mg_cs_office,mg_de_ancient,mg_de_engage,mg_cs_apollo,mg_lobby_mapveto"</span>
+player_nevershow_communityservermessage <span class="s2">"1"</span>
+player_survival_list_9_1_B <span class="s2">"mg_dz_blacksite,mg_dz_sirocco,mg_dz_frostbite"</span>
+player_teamplayedlast <span class="s2">"2"</span>
+player_wargames_list2_9_1_E04 <span class="s2">"mg_skirmish_armsrace,mg_skirmish_demolition,mg_skirmish_flyingscoutsman"</span>
+player_wargames_retakes_list_9_1_E04 <span class="s2">"mg_skirmish_retakes"</span>
+r_drawmodelstatsoverlaymax <span class="s2">"1.5"</span>
+r_drawmodelstatsoverlaymin <span class="s2">"0.1"</span>
+r_drawtracers_firstperson <span class="s2">"1"</span>
+r_eyegloss <span class="s2">"1"</span>
+r_eyemove <span class="s2">"1"</span>
+r_eyeshift_x <span class="s2">"0"</span>
+r_eyeshift_y <span class="s2">"0"</span>
+r_eyeshift_z <span class="s2">"0"</span>
+r_eyesize <span class="s2">"0"</span>
+r_player_visibility_mode <span class="s2">"1"</span>
+rate <span class="s2">"300000.000000"</span>
+safezonex <span class="s2">"1.0"</span>
+safezoney <span class="s2">"1.0"</span>
+sc_enable <span class="s2">"1.0"</span>
+sc_joystick_map <span class="s2">"1"</span>
+sc_pitch_sensitivity <span class="s2">"1.0"</span>
+sc_yaw_sensitivity <span class="s2">"1.0"</span>
+scene_showfaceto <span class="s2">"0"</span>
+scene_showlook <span class="s2">"0"</span>
+scene_showmoveto <span class="s2">"0"</span>
+scene_showunlock <span class="s2">"0"</span>
+sensitivity <span class="s2">"2.5"</span>
+sk_autoaim_mode <span class="s2">"1"</span>
+skill <span class="s2">"1.000000"</span>
+snd_deathcamera_volume <span class="s2">"0.3"</span>
+snd_duckerattacktime <span class="s2">"0.5"</span>
+snd_duckerreleasetime <span class="s2">"2.5"</span>
+snd_duckerthreshold <span class="s2">"0.15"</span>
+snd_ducking_off <span class="s2">"1"</span>
+snd_ducktovolume <span class="s2">"0.55"</span>
+snd_dzmusic_volume <span class="s2">"0.2"</span>
+snd_hrtf_distance_behind <span class="s2">"100"</span>
+snd_hrtf_voice_delay <span class="s2">"0.1"</span>
+snd_hwcompat <span class="s2">"0"</span>
+snd_mapobjective_volume <span class="s2">"0"</span>
+snd_menumusic_volume <span class="s2">"0.300000"</span>
+snd_mix_async <span class="s2">"1"</span>
+snd_mix_async_onetime_reset <span class="s2">"1"</span>
+snd_mixahead <span class="s2">"0.025"</span>
+snd_music_selection <span class="s2">"2"</span>
+snd_music_volume_onetime_reset_2 <span class="s2">"1"</span>
+snd_musicvolume_multiplier_inoverlay <span class="s2">"0.1"</span>
+snd_mute_losefocus <span class="s2">"1"</span>
+snd_mute_mvp_music_live_players <span class="s2">"0"</span>
+snd_mvp_volume <span class="s2">"1.0"</span>
+snd_pitchquality <span class="s2">"1"</span>
+snd_roundend_volume <span class="s2">"0"</span>
+snd_roundstart_volume <span class="s2">"0"</span>
+snd_surround_speakers <span class="s2">"-1"</span>
+snd_tensecondwarning_volume <span class="s2">"0"</span>
+sound_device_override <span class="s2">""</span>
+spec_replay_autostart <span class="s2">"1"</span>
+spec_show_xray <span class="s2">"1"</span>
+spec_usenumberkeys_nobinds <span class="s2">"1"</span>
+ss_splitmode <span class="s2">"0"</span>
+store_version <span class="s2">"1"</span>
+suitvolume <span class="s2">"0.25"</span>
+sv_forcepreload <span class="s2">"0"</span>
+sv_log_onefile <span class="s2">"0"</span>
+sv_logbans <span class="s2">"0"</span>
+sv_logecho <span class="s2">"1"</span>
+sv_logfile <span class="s2">"1"</span>
+sv_logflush <span class="s2">"0"</span>
+sv_logsdir <span class="s2">"logs"</span>
+sv_noclipaccelerate <span class="s2">"5"</span>
+sv_noclipspeed <span class="s2">"5"</span>
+sv_pvsskipanimation <span class="s2">"1"</span>
+sv_skyname <span class="s2">"sky_day02_05"</span>
+sv_specaccelerate <span class="s2">"5"</span>
+sv_specnoclip <span class="s2">"1"</span>
+sv_specspeed <span class="s2">"3"</span>
+sv_unlockedchapters <span class="s2">"1"</span>
+sv_voiceenable <span class="s2">"1"</span>
+test_convar <span class="s2">"0"</span>
+texture_budget_background_alpha <span class="s2">"128"</span>
+texture_budget_panel_bottom_of_history_fraction <span class="s2">".25"</span>
+texture_budget_panel_height <span class="s2">"284"</span>
+texture_budget_panel_width <span class="s2">"512"</span>
+texture_budget_panel_x <span class="s2">"0"</span>
+texture_budget_panel_y <span class="s2">"450"</span>
+tr_best_course_time <span class="s2">"0"</span>
+tr_completed_training <span class="s2">"0"</span>
+triple_monitor_mode <span class="s2">"0"</span>
+trusted_launch <span class="s2">"1"</span>
+trusted_launch_once <span class="s2">"0"</span>
+tv_nochat <span class="s2">"0"</span>
+ui_deepstats_radio_heat_figurine <span class="s2">"0"</span>
+ui_deepstats_radio_heat_tab <span class="s2">"0"</span>
+ui_deepstats_radio_heat_team <span class="s2">"0"</span>
+ui_deepstats_toplevel_mode <span class="s2">"0"</span>
+ui_inventorysettings_recently_acknowledged <span class="s2">""</span>
+ui_mainmenu_bkgnd_movie_C5E107D7 <span class="s2">"ancient"</span>
+ui_nearbylobbies_filter3 <span class="s2">"competitive"</span>
+ui_news_last_read_link <span class="s2">"https://blog.counter-strike.net/zh-hans/index.php/2020/12/31941/"</span>
+ui_playsettings_maps_listen_casual <span class="s2">"mg_de_ancient"</span>
+ui_playsettings_maps_listen_competitive <span class="s2">"random_classic"</span>
+ui_playsettings_maps_listen_deathmatch <span class="s2">"random_classic"</span>
+ui_playsettings_maps_listen_scrimcomp2v2 <span class="s2">"mg_de_inferno"</span>
+ui_playsettings_maps_listen_skirmish <span class="s2">"mg_skirmish_flyingscoutsman"</span>
+ui_playsettings_maps_listen_skirmish_retakes <span class="s2">"mg_skirmish_retakes"</span>
+ui_playsettings_maps_official_casual <span class="s2">"mg_casualdelta"</span>
+ui_playsettings_maps_official_deathmatch <span class="s2">"mg_dust247"</span>
+ui_playsettings_maps_workshop <span class="s2">"@workshop/2185699891/csgohub_prac"</span>
+ui_playsettings_mode_listen <span class="s2">"casual"</span>
+ui_playsettings_mode_official_v20 <span class="s2">"deathmatch"</span>
+ui_playsettings_survival_solo <span class="s2">"0"</span>
+ui_playsettings_warmup_map_name <span class="s2">"de_mirage"</span>
+ui_popup_weaponupdate_version <span class="s2">"2"</span>
+ui_setting_advertiseforhire_auto <span class="s2">"1"</span>
+ui_setting_advertiseforhire_auto_last <span class="s2">"/competitive"</span>
+ui_steam_overlay_notification_position <span class="s2">"topright"</span>
+ui_vanitysetting_loadoutslot_ct <span class="s2">"rifle1"</span>
+ui_vanitysetting_loadoutslot_t <span class="s2">"rifle1"</span>
+ui_vanitysetting_team <span class="s2">"t"</span>
+vgui_message_dialog_modal <span class="s2">"1"</span>
+viewmodel_fov <span class="s2">"60"</span>
+viewmodel_offset_x <span class="s2">"1"</span>
+viewmodel_offset_y <span class="s2">"1"</span>
+viewmodel_offset_z <span class="s2">"-1"</span>
+viewmodel_presetpos <span class="s2">"1"</span>
+viewmodel_recoil <span class="s2">"1.0"</span>
+voice_caster_enable <span class="s2">"0"</span>
+voice_caster_scale <span class="s2">"1"</span>
+voice_enable <span class="s2">"1"</span>
+voice_forcemicrecord <span class="s2">"1"</span>
+voice_mixer_boost <span class="s2">"0"</span>
+voice_mixer_mute <span class="s2">"0"</span>
+voice_mixer_volume <span class="s2">"1.0"</span>
+voice_modenable <span class="s2">"1"</span>
+voice_positional <span class="s2">"0"</span>
+voice_scale <span class="s2">"1.0"</span>
+voice_system_enable <span class="s2">"1"</span>
+voice_threshold <span class="s2">"4000"</span>
+volume <span class="s2">"1.0"</span>
+vprof_graphheight <span class="s2">"256"</span>
+vprof_graphwidth <span class="s2">"512"</span>
+vprof_unaccounted_limit <span class="s2">"0.3"</span>
+vprof_verbose <span class="s2">"1"</span>
+vprof_warningmsec <span class="s2">"10"</span>
+weapon_accuracy_logging <span class="s2">"0"</span>
+xbox_autothrottle <span class="s2">"1"</span>
+xbox_throttlebias <span class="s2">"100"</span>
+xbox_throttlespoof <span class="s2">"200"</span>
+zoom_sensitivity_ratio_joystick <span class="s2">"1.0"</span>
+zoom_sensitivity_ratio_mouse <span class="s2">"1.0"</span>
+
+// 快速断开连接，防止被恶意踢出
+<span class="nb">bind</span> <span class="s2">"ENTER"</span> <span class="s2">"disconnect"</span>
+
+// Rush B: <span class="m">10048859</span>
+// Bilibili_Inc: <span class="m">33416861</span>
+// Just Monika: <span class="m">30809938</span>
+// SUSTC: <span class="m">10637007</span>
+<span class="hll">cl_clanid <span class="m">0</span>
+</span><span class="hll"><span class="nb">bind</span> <span class="s2">"n"</span> <span class="s2">"my_team"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_team"</span> <span class="s2">"my_team_null"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_team_null"</span> <span class="s2">"cl_clanid 0 ; alias my_team my_team_bilibili"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_team_bilibili"</span> <span class="s2">"cl_clanid 33416861 ; alias my_team my_team_monika"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_team_monika"</span> <span class="s2">"cl_clanid 30809938 ; alias my_team my_team_sustc"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_team_sustc"</span> <span class="s2">"cl_clanid 10637007 ; alias my_team my_team_shark"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_team_shark"</span> <span class="s2">"cl_clanid 40997070 ; alias my_team my_team_null"</span>
+</span>
+// crashz CROSSHAIR GENERATOR V3
+<span class="hll"><span class="nb">bind</span> <span class="s2">","</span> <span class="s2">"my_croosshair"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_croosshair"</span> <span class="s2">"my_croosshair_1"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_croosshair_1"</span> <span class="s2">"my_croosshair_1_1;my_croosshair_1_2 ; alias my_croosshair my_croosshair_2"</span>
+</span><span class="hll">        <span class="nb">alias</span> <span class="s2">"my_croosshair_1_1"</span> <span class="s2">"cl_crosshair_t 0;cl_crosshair_drawoutline 0;cl_crosshair_dynamic_maxdist_splitratio 0.3;cl_crosshair_dynamic_splitalpha_outermod 0.5;cl_crosshair_dynamic_splitdist 7;cl_crosshair_friendly_warning 2;cl_crosshairalpha 255;cl_crosshaircolor 4"</span>
+</span><span class="hll">        <span class="nb">alias</span> <span class="s2">"my_croosshair_1_2"</span> <span class="s2">"cl_crosshaircolor_b 255;cl_crosshaircolor_g 0;cl_crosshaircolor_r 1;cl_crosshairdot 1;cl_crosshairgap -2;cl_crosshairsize 1;cl_crosshairstyle 5;cl_crosshairthickness 0"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_croosshair_2"</span> <span class="s2">"my_croosshair_2_1;my_croosshair_2_2 ; alias my_croosshair my_croosshair_3"</span>
+</span><span class="hll">        <span class="nb">alias</span> <span class="s2">"my_croosshair_2_1"</span> <span class="s2">"cl_crosshair_t 1;cl_crosshair_drawoutline 0;cl_crosshair_dynamic_maxdist_splitratio 0.3;cl_crosshair_dynamic_splitalpha_outermod 0.5;cl_crosshair_dynamic_splitdist 7;cl_crosshair_friendly_warning 2;cl_crosshairalpha 255;cl_crosshaircolor 5"</span>
+</span><span class="hll">        <span class="nb">alias</span> <span class="s2">"my_croosshair_2_2"</span> <span class="s2">"cl_crosshaircolor_b 109;cl_crosshaircolor_g 67;cl_crosshaircolor_r 255;cl_crosshairdot 0;cl_crosshairgap -5;cl_crosshairsize 1.5;cl_crosshairstyle 4;cl_crosshairthickness 1.8"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_croosshair_3"</span> <span class="s2">"my_croosshair_3_1;my_croosshair_3_2 ; alias my_croosshair my_croosshair_4"</span>
+</span><span class="hll">        <span class="nb">alias</span> <span class="s2">"my_croosshair_3_1"</span> <span class="s2">"cl_crosshair_t 0;cl_crosshair_drawoutline 0;cl_crosshair_dynamic_maxdist_splitratio 0.0;cl_crosshair_dynamic_splitalpha_outermod 0.3;cl_crosshair_dynamic_splitdist 5;cl_crosshair_friendly_warning 1;cl_crosshairalpha 75;cl_crosshaircolor 5"</span>
+</span><span class="hll">        <span class="nb">alias</span> <span class="s2">"my_croosshair_3_2"</span> <span class="s2">"cl_crosshaircolor_b 255;cl_crosshaircolor_g 0;cl_crosshaircolor_r 255;cl_crosshairdot 1;cl_crosshairgap -7;cl_crosshairsize 1000;cl_crosshairstyle 4;cl_crosshairthickness 1;cl_fixedcrosshairgap -7"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_croosshair_4"</span> <span class="s2">"my_croosshair_4_1;my_croosshair_4_2 ; alias my_croosshair my_croosshair_1"</span>
+</span><span class="hll">        <span class="nb">alias</span> <span class="s2">"my_croosshair_4_1"</span> <span class="s2">"cl_crosshair_t 0;cl_crosshair_drawoutline 1;cl_crosshair_dynamic_maxdist_splitratio 0.35;cl_crosshair_dynamic_splitalpha_outermod 0.5;cl_crosshair_dynamic_splitdist 7;cl_crosshair_friendly_warning 1;cl_crosshairalpha 240;cl_crosshaircolor 5"</span>
+</span><span class="hll">        <span class="nb">alias</span> <span class="s2">"my_croosshair_4_2"</span> <span class="s2">"cl_crosshaircolor_b 0;cl_crosshaircolor_g 255;cl_crosshaircolor_r 0;cl_crosshairdot 1;cl_crosshairgap 9999;cl_crosshairsize 4;cl_crosshairstyle 4;cl_crosshairthickness 0.5;cl_fixedcrosshairgap 3"</span>
+</span>
+// knife: ent_fire_weapon_knife.cfg
+<span class="hll"><span class="nb">bind</span> <span class="s2">"["</span> <span class="s2">"my_knife"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife"</span> <span class="s2">"my_knife_1"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_0"</span> <span class="s2">"sv_cheats 1;mp_drop_knife_enable 1"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_1"</span> <span class="s2">"my_knife_0;give weapon_knife_outdoor;exec ent_fire_weapon_knife ; alias my_knife my_knife_2"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_2"</span> <span class="s2">"my_knife_0;give weapon_knife_skeleton;exec ent_fire_weapon_knife ; alias my_knife my_knife_3"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_3"</span> <span class="s2">"my_knife_0;give weapon_knife_canis;exec ent_fire_weapon_knife ; alias my_knife my_knife_4"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_4"</span> <span class="s2">"my_knife_0;give weapon_knife_cord;exec ent_fire_weapon_knife ; alias my_knife my_knife_5"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_5"</span> <span class="s2">"my_knife_0;give weapon_knife_css;exec ent_fire_weapon_knife ; alias my_knife my_knife_6"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_6"</span> <span class="s2">"my_knife_0;give weapon_bayonet;exec ent_fire_weapon_knife ; alias my_knife my_knife_7"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_7"</span> <span class="s2">"my_knife_0;give weapon_knife_flip;exec ent_fire_weapon_knife ; alias my_knife my_knife_8"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_8"</span> <span class="s2">"my_knife_0;give weapon_knife_gut;exec ent_fire_weapon_knife ; alias my_knife my_knife_9"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_9"</span> <span class="s2">"my_knife_0;give weapon_knife_karambit;exec ent_fire_weapon_knife ; alias my_knife my_knife_10"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_10"</span> <span class="s2">"my_knife_0;give weapon_knife_m9_bayonet;exec ent_fire_weapon_knife ; alias my_knife my_knife_11"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_11"</span> <span class="s2">"my_knife_0;give weapon_knife_tactical;exec ent_fire_weapon_knife ; alias my_knife my_knife_12"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_12"</span> <span class="s2">"my_knife_0;give weapon_knife_butterfly;exec ent_fire_weapon_knife ; alias my_knife my_knife_13"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_13"</span> <span class="s2">"my_knife_0;give weapon_knife_falchion;exec ent_fire_weapon_knife ; alias my_knife my_knife_14"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_14"</span> <span class="s2">"my_knife_0;give weapon_knife_push;exec ent_fire_weapon_knife ; alias my_knife my_knife_15"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_15"</span> <span class="s2">"my_knife_0;give weapon_knife_survival_bowie;exec ent_fire_weapon_knife ; alias my_knife my_knife_16"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_16"</span> <span class="s2">"my_knife_0;give weapon_knife_ursus;exec ent_fire_weapon_knife ; alias my_knife my_knife_17"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_17"</span> <span class="s2">"my_knife_0;give weapon_knife_gypsy_jackknife;exec ent_fire_weapon_knife ; alias my_knife my_knife_18"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_18"</span> <span class="s2">"my_knife_0;give weapon_knife_stiletto;exec ent_fire_weapon_knife ; alias my_knife my_knife_19"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_19"</span> <span class="s2">"my_knife_0;give weapon_knife_widowmaker;exec ent_fire_weapon_knife ; alias my_knife my_knife_20"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_20"</span> <span class="s2">"my_knife_0;give weapon_knifegg;exec ent_fire_weapon_knife ; alias my_knife my_knife_21"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_knife_21"</span> <span class="s2">"my_knife_0;give weapon_knife_ghost;exec ent_fire_weapon_knife ; alias my_knife my_knife_1"</span>
+</span>
+// host_timescale
+<span class="hll"><span class="nb">bind</span> <span class="s2">"]"</span> <span class="s2">"my_timescale"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_timescale"</span> <span class="s2">"my_timescale_1"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_timescale_0"</span> <span class="s2">"sv_cheats 1"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_timescale_1"</span> <span class="s2">"my_timescale_0;host_timescale 0.25 ; alias my_timescale my_timescale_2"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_timescale_2"</span> <span class="s2">"my_timescale_0;host_timescale 0.5 ; alias my_timescale my_timescale_3"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_timescale_3"</span> <span class="s2">"my_timescale_0;host_timescale 1 ; alias my_timescale my_timescale_4"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_timescale_4"</span> <span class="s2">"my_timescale_0;host_timescale 1.5 ; alias my_timescale my_timescale_5"</span>
+</span><span class="hll">    <span class="nb">alias</span> <span class="s2">"my_timescale_5"</span> <span class="s2">"my_timescale_0;host_timescale 2 ; alias my_timescale my_timescale_1"</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>ent_fire weapon_knife addoutput <span class="s2">"classname weapon_knifegg"</span>
+</code></pre></div>
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span>
+<span class="normal">72</span>
+<span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span>
+<span class="normal">80</span>
+<span class="normal">81</span>
+<span class="normal">82</span>
+<span class="normal">83</span>
+<span class="normal">84</span>
+<span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>// 加载脚本 Counter-Strike Global Offensive<span class="se">\c</span>sgo<span class="se">\s</span>cripts<span class="se">\v</span>scripts
+script_execute practice_extension
+
+// 小键盘为设置跑图快捷键
+// kp_pgdn, kp_home
+
+// 绑定按键
+<span class="nb">bind</span>  <span class="s2">"kp_enter"</span> <span class="s2">"noclip"</span>  // 飞行
+<span class="nb">bind</span>  <span class="s2">"kp_downarrow"</span> <span class="s2">"toggle bot_crouch"</span>  // bot 蹲下<span class="o">(</span>注意键位冲突<span class="o">)</span>
+<span class="nb">bind</span>  <span class="s2">"kp_slash"</span> <span class="s2">"bot_kill"</span>  // 杀死 bot
+<span class="nb">bind</span>  <span class="s2">"KP_5"</span> <span class="s2">"toggle r_drawothermodels 1 2"</span>  // 切换透视模式
+<span class="nb">bind</span>  <span class="s2">"kp_plus"</span> <span class="s2">"bot_add"</span>  // 添加 bot
+<span class="nb">bind</span>  <span class="s2">"kp_minus"</span> <span class="s2">"bot_kick"</span> // 删除 bot
+<span class="nb">bind</span>  <span class="s2">"kp_multiply"</span> <span class="s2">"bot_stop 1;bot_place"</span>  // 放置 bot（先添加 bot）
+<span class="nb">bind</span>  <span class="s2">"kp_ins"</span> <span class="s2">"mp_restartgame 1"</span>  // 重新开始游戏
+<span class="nb">bind</span>  <span class="s2">"kp_uparrow"</span> <span class="s2">"sv_rethrow_last_grenade"</span>  // 重现最近一次的投掷物
+<span class="nb">bind</span>  <span class="s2">"kp_leftarrow"</span> <span class="s2">"toggle cl_grenadepreview"</span>  // 切换投掷物轨迹预测
+<span class="nb">bind</span>  <span class="s2">"kp_rightarrow"</span> <span class="s2">"cl_sim_grenade_trajectory 30"</span>  // 显示当前道具轨迹 30s
+<span class="nb">bind</span>  <span class="s2">"kp_pgup"</span> <span class="s2">"give item_assaultsuit;give weapon_flashbang;give weapon_hegrenade;give weapon_smokegrenade;give weapon_molotov;script sethp()"</span>  // 补齐血条头甲和满道具
+<span class="nb">bind</span>  <span class="s2">"kp_end"</span> <span class="s2">"toggle bot_mimic 0 1"</span>  // BOT 模仿玩家动作
+
+<span class="nb">bind</span> <span class="s2">"leftarrow"</span> <span class="s2">"script storeA();con_logfile cfg/A.log; getpos; con_logfile 0"</span>  // 保存点A
+<span class="nb">bind</span> <span class="s2">"uparrow"</span> <span class="s2">"script loadA();exec A.log"</span>  // 回到点A
+<span class="nb">bind</span> <span class="s2">"rightarrow"</span> <span class="s2">"script storeB();con_logfile cfg/B.log; getpos; con_logfile 0"</span>  // 保存点B
+<span class="nb">bind</span> <span class="s2">"downarrow"</span> <span class="s2">"script loadB();exec B.log"</span>  // 回到点B
+<span class="nb">alias</span> <span class="s2">"hint"</span> <span class="s2">"script hint()"</span>  // 脚本存在时，使用hint指令打印跑图提示
+
+<span class="nb">bind</span>  <span class="s2">"kp_del"</span> <span class="s2">"+Pucci"</span>  // 一键加速时间（让烟雾弹和燃烧弹快速消失）
+    <span class="nb">alias</span> <span class="s2">"+Pucci"</span> <span class="s2">"host_timescale 25"</span>
+    <span class="nb">alias</span> <span class="s2">"-Pucci"</span> <span class="s2">"host_timescale 1"</span>
+
+// 一次性指令
+sv_cheats                        <span class="m">1</span>      // 开启作弊
+cl_use_opens_buy_menu            <span class="m">0</span>      // 关闭 E 键打开购买菜单
+ammo_grenade_limit_total         <span class="m">6</span>      // 至多携带道具数
+bot_kick                                // 踢掉电脑
+
+sv_alltalk                       <span class="m">1</span>      // 全局语音<span class="o">(</span>360度无死角<span class="o">)</span>
+sv_talk_enemy_dead               <span class="m">1</span>
+sv_talk_enemy_living             <span class="m">1</span>
+sv_talk_after_dying_time         <span class="m">99999</span>
+sv_infinite_ammo                 <span class="m">1</span>      // 无限子弹 &lt;<span class="m">1</span>.无限子弹 <span class="m">2</span>.无限弹夹数 <span class="m">0</span>.关闭&gt;
+sv_showimpacts                   <span class="m">1</span>      // 显示弹着点
+sv_showimpacts_time              <span class="m">15</span>     // 弹着点时间
+sv_grenade_trajectory            <span class="m">1</span>      // 显示投掷物轨迹
+sv_grenade_trajectory_time       <span class="m">15</span>     // 投掷物轨迹显示时间
+sv_grenade_trajectory_dash       <span class="m">0</span>      // 轨迹样式&lt;<span class="m">1</span>.绿黑相间 <span class="m">2</span>.绿&gt;
+sv_grenade_trajectory_thickness  <span class="m">0</span>.5    // 轨迹线厚度
+
+mp_maxmoney                      <span class="m">65535</span>  // 金钱上限
+mp_startmoney                    <span class="m">65535</span>  // 开始满金钱
+mp_afterroundmoney               <span class="m">65535</span>  // 回合结束满金钱
+mp_buytime                       <span class="m">9999</span>   // 购买时间
+mp_warmuptime                    <span class="m">9999</span>   // 热身时间
+mp_roundtime                     <span class="m">60</span>     // 每回合时间
+mp_roundtime_defuse              <span class="m">60</span>     // 每回合时间
+mp_freezetime                    <span class="m">1</span>      // 开局等待时间1s
+mp_round_restart_delay           <span class="m">2</span>      // 回合结束后等待时间2s
+
+mp_buy_anywhere                  <span class="m">1</span>      // 全地图购买
+mp_free_armor                    <span class="m">2</span>      // 出生全甲&lt;<span class="m">1</span>.半甲 <span class="m">2</span>.全甲 <span class="m">0</span>.关闭&gt;
+mp_drop_knife_enable             <span class="m">1</span>      // 允许扔刀
+mp_drop_grenade_enable           <span class="m">1</span>      // 允许扔道具
+mp_items_prohibited              <span class="m">0</span>      // 去除物品购买限制
+
+mp_humanteam                     any    // 可加入任意阵营
+mp_limitteams                    <span class="m">0</span>      // 去除队伍人数限制
+mp_autoteambalance               <span class="m">0</span>      // 关闭自动平衡队伍人数
+mp_autokick                      <span class="m">0</span>      // 关闭自动踢人
+mp_spectators_max                <span class="m">9</span>      // 最多观察者人数
+mp_forcecamera                   <span class="m">0</span>      // 不限制观察者观看的队伍
+mp_respawn_immunitytime          <span class="m">0</span>      // 复活免疫时间
+mp_respawn_on_death_ct           <span class="m">1</span>      // CT 死后即刻复活
+mp_respawn_on_death_t            <span class="m">1</span>      // T 死后即刻复活
+mp_warmup_end                           // 热身结束
+
+// CT和T出生携带的武器
+mp_ct_default_secondary weapon_p250
+mp_ct_default_primary   weapon_m4a4
+mp_t_default_secondary  weapon_p250
+mp_t_default_primary    weapon_ak47
+
+// 全枪全弹
+give weapon_awp
+give weapon_deagle
+give weapon_hegrenade
+give weapon_flashbang
+give weapon_smokegrenade
+give weapon_molotov
+give weapon_vesthelm
+give weapon_ak47
+</code></pre></div>
+</td></tr></table>
+</div>
+<div class="tabbed-block">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
+<span class="normal">  2</span>
+<span class="normal">  3</span>
+<span class="normal">  4</span>
+<span class="normal">  5</span>
+<span class="normal">  6</span>
+<span class="normal">  7</span>
+<span class="normal">  8</span>
+<span class="normal">  9</span>
+<span class="normal"> 10</span>
+<span class="normal"> 11</span>
+<span class="normal"> 12</span>
+<span class="normal"> 13</span>
+<span class="normal"> 14</span>
+<span class="normal"> 15</span>
+<span class="normal"> 16</span>
+<span class="normal"> 17</span>
+<span class="normal"> 18</span>
+<span class="normal"> 19</span>
+<span class="normal"> 20</span>
+<span class="normal"> 21</span>
+<span class="normal"> 22</span>
+<span class="normal"> 23</span>
+<span class="normal"> 24</span>
+<span class="normal"> 25</span>
+<span class="normal"> 26</span>
+<span class="normal"> 27</span>
+<span class="normal"> 28</span>
+<span class="normal"> 29</span>
+<span class="normal"> 30</span>
+<span class="normal"> 31</span>
+<span class="normal"> 32</span>
+<span class="normal"> 33</span>
+<span class="normal"> 34</span>
+<span class="normal"> 35</span>
+<span class="normal"> 36</span>
+<span class="normal"> 37</span>
+<span class="normal"> 38</span>
+<span class="normal"> 39</span>
+<span class="normal"> 40</span>
+<span class="normal"> 41</span>
+<span class="normal"> 42</span>
+<span class="normal"> 43</span>
+<span class="normal"> 44</span>
+<span class="normal"> 45</span>
+<span class="normal"> 46</span>
+<span class="normal"> 47</span>
+<span class="normal"> 48</span>
+<span class="normal"> 49</span>
+<span class="normal"> 50</span>
+<span class="normal"> 51</span>
+<span class="normal"> 52</span>
+<span class="normal"> 53</span>
+<span class="normal"> 54</span>
+<span class="normal"> 55</span>
+<span class="normal"> 56</span>
+<span class="normal"> 57</span>
+<span class="normal"> 58</span>
+<span class="normal"> 59</span>
+<span class="normal"> 60</span>
+<span class="normal"> 61</span>
+<span class="normal"> 62</span>
+<span class="normal"> 63</span>
+<span class="normal"> 64</span>
+<span class="normal"> 65</span>
+<span class="normal"> 66</span>
+<span class="normal"> 67</span>
+<span class="normal"> 68</span>
+<span class="normal"> 69</span>
+<span class="normal"> 70</span>
+<span class="normal"> 71</span>
+<span class="normal"> 72</span>
+<span class="normal"> 73</span>
+<span class="normal"> 74</span>
+<span class="normal"> 75</span>
+<span class="normal"> 76</span>
+<span class="normal"> 77</span>
+<span class="normal"> 78</span>
+<span class="normal"> 79</span>
+<span class="normal"> 80</span>
+<span class="normal"> 81</span>
+<span class="normal"> 82</span>
+<span class="normal"> 83</span>
+<span class="normal"> 84</span>
+<span class="normal"> 85</span>
+<span class="normal"> 86</span>
+<span class="normal"> 87</span>
+<span class="normal"> 88</span>
+<span class="normal"> 89</span>
+<span class="normal"> 90</span>
+<span class="normal"> 91</span>
+<span class="normal"> 92</span>
+<span class="normal"> 93</span>
+<span class="normal"> 94</span>
+<span class="normal"> 95</span>
+<span class="normal"> 96</span>
+<span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span>
+<span class="normal">104</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span>
+<span class="normal">128</span>
+<span class="normal">129</span>
+<span class="normal">130</span>
+<span class="normal">131</span>
+<span class="normal">132</span>
+<span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span>
+<span class="normal">140</span>
+<span class="normal">141</span>
+<span class="normal">142</span>
+<span class="normal">143</span>
+<span class="normal">144</span>
+<span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code>// 本文件放在此处 Counter-Strike Global Offensive<span class="se">\c</span>sgo<span class="se">\s</span>cripts<span class="se">\v</span>scripts
+// 加载方法 script_execute practiceExt
+
+// 初始化
+ent &lt;- null<span class="p">;</span>        //定义物体变量
+<span class="nb">command</span> &lt;- null<span class="p">;</span>        //定义指令变量，存放指令字符串
+PositionA &lt;- Vector<span class="o">(</span><span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span><span class="o">)</span><span class="p">;</span>       //定义A位置变量
+AngleA &lt;- Vector<span class="o">(</span><span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span><span class="o">)</span><span class="p">;</span>      //定义A角度变量
+PositionB &lt;- Vector<span class="o">(</span><span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span><span class="o">)</span><span class="p">;</span>       //定义B位置变量
+AngleB &lt;- Vector<span class="o">(</span><span class="m">0</span>, <span class="m">0</span>, <span class="m">0</span><span class="o">)</span><span class="p">;</span>      //定义B角度变量
+printl<span class="o">(</span> @<span class="s2">"&gt;&gt;&gt; 跑图CFG扩展脚本初始化完成"</span> <span class="o">)</span><span class="p">;</span>
+
+
+<span class="k">function</span> sethp<span class="o">()</span> <span class="o">{</span>
+    SendToConsole<span class="o">(</span> @<span class="s2">"ent_fire !self addoutput ""health 100"" "</span> <span class="o">)</span><span class="p">;</span>
+<span class="o">}</span>
+
+// 因为无法获得pitch 竖直角度总是为0 故此处主要用作弹出提示 等待改进
+<span class="k">function</span> storeA<span class="o">()</span> <span class="o">{</span>
+    //获取玩家实体 获取时总是1次成功1次失败故使用 或 运算
+    <span class="k">if</span> <span class="o">(</span> <span class="o">(</span> <span class="nv">ent</span> <span class="o">=</span> Entities.FindByClassname<span class="o">(</span>ent, <span class="s2">"player"</span><span class="o">)</span> <span class="o">)</span> !<span class="o">=</span> null <span class="o">||</span> <span class="o">(</span> <span class="nv">ent</span> <span class="o">=</span> Entities.FindByClassname<span class="o">(</span>ent, <span class="s2">"player"</span><span class="o">)</span> <span class="o">)</span> !<span class="o">=</span> null <span class="o">)</span> <span class="o">{</span> 
+        <span class="nv">PositionA</span> <span class="o">=</span> ent.GetOrigin<span class="o">()</span><span class="p">;</span>    //获取位置
+        <span class="nv">AngleA</span> <span class="o">=</span>  ent.GetAngles<span class="o">()</span><span class="p">;</span>  //获取角度
+        ScriptPrintMessageCenterAll<span class="o">(</span> <span class="s2">"已保存点A"</span> <span class="o">)</span><span class="p">;</span>
+        printl<span class="o">(</span> <span class="s2">"&gt;&gt;&gt; 点A指令如下"</span> <span class="o">)</span>
+    <span class="o">}</span>
+    //else <span class="o">{</span>
+    //  ScriptPrintMessageCenterAll<span class="o">(</span> <span class="s2">"保存点A失败，位置为(0, 0, 0)"</span> <span class="o">)</span><span class="p">;</span> 
+    //<span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">function</span> loadA<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span> PositionA.x <span class="o">||</span> PositionA.y <span class="o">||</span> AngleA.x <span class="o">||</span> AngleA.y <span class="o">||</span> AngleA.z <span class="o">)</span> <span class="o">{</span>
+        <span class="nb">command</span> <span class="o">=</span> <span class="s2">"setpos "</span> + PositionA.x + <span class="s2">", "</span> + PositionA.y + <span class="s2">", "</span> + PositionA.z + <span class="s2">";"</span><span class="p">;</span>
+        //command <span class="o">=</span> <span class="nb">command</span> + <span class="s2">"setang "</span> + AngleA.x + <span class="s2">", "</span> + AngleA.y + <span class="s2">", "</span> + AngleA.z + <span class="s2">";"</span> <span class="p">;</span>
+        SendToConsole<span class="o">(</span> <span class="nb">command</span> <span class="o">)</span><span class="p">;</span>
+        SendToConsole<span class="o">(</span> <span class="s2">"-moveleft;-moveright;-forward;-back"</span> <span class="o">)</span><span class="p">;</span>
+        ent.SetVelocity<span class="o">(</span> Vector<span class="o">(</span><span class="m">0</span>,0,0<span class="o">)</span> <span class="o">)</span><span class="p">;</span>
+        ScriptPrintMessageCenterAll<span class="o">(</span> <span class="s2">"已回到点A"</span> <span class="o">)</span><span class="p">;</span> 
+    <span class="o">}</span>
+    //else <span class="o">{</span>
+    //  ScriptPrintMessageCenterAll<span class="o">(</span> <span class="s2">"回到点A失败，位置为(0, 0, 0)"</span> <span class="o">)</span><span class="p">;</span> 
+    //<span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">function</span> storeB<span class="o">()</span> <span class="o">{</span>
+    //获取玩家实体
+    <span class="k">if</span> <span class="o">(</span> <span class="o">(</span> <span class="nv">ent</span> <span class="o">=</span> Entities.FindByClassname<span class="o">(</span>ent, <span class="s2">"player"</span><span class="o">)</span> <span class="o">)</span> !<span class="o">=</span> null <span class="o">||</span> <span class="o">(</span> <span class="nv">ent</span> <span class="o">=</span> Entities.FindByClassname<span class="o">(</span>ent, <span class="s2">"player"</span><span class="o">)</span> <span class="o">)</span> !<span class="o">=</span> null <span class="o">)</span> <span class="o">{</span> 
+        <span class="nv">PositionB</span> <span class="o">=</span> ent.GetOrigin<span class="o">()</span><span class="p">;</span>    //获取位置
+        <span class="nv">AngleB</span> <span class="o">=</span>  ent.GetAngles<span class="o">()</span><span class="p">;</span>  //获取角度
+        ScriptPrintMessageCenterAll<span class="o">(</span> <span class="s2">"已保存点B"</span> <span class="o">)</span><span class="p">;</span>
+        printl<span class="o">(</span> <span class="s2">"&gt;&gt;&gt; 点B指令如下"</span> <span class="o">)</span>
+    <span class="o">}</span>
+    //else <span class="o">{</span>
+    //  ScriptPrintMessageCenterAll<span class="o">(</span> <span class="s2">"保存点B失败，位置为(0, 0, 0)"</span> <span class="o">)</span><span class="p">;</span> 
+    //<span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">function</span> loadB<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span><span class="o">(</span> PositionB.x <span class="o">||</span> PositionB.y <span class="o">||</span> AngleB.x <span class="o">||</span> AngleB.y <span class="o">||</span> AngleB.z <span class="o">)</span> <span class="o">{</span>
+        <span class="nb">command</span> <span class="o">=</span> <span class="s2">"setpos "</span> + PositionB.x + <span class="s2">", "</span> + PositionB.y + <span class="s2">", "</span> + PositionB.z + <span class="s2">";"</span><span class="p">;</span>
+        //command <span class="o">=</span> <span class="nb">command</span> + <span class="s2">"setang "</span> + AngleB.x + <span class="s2">", "</span> + AngleB.y + <span class="s2">", "</span> + AngleB.z + <span class="s2">";"</span> <span class="p">;</span>
+        SendToConsole<span class="o">(</span> <span class="nb">command</span> <span class="o">)</span><span class="p">;</span>
+        SendToConsole<span class="o">(</span> <span class="s2">"-moveleft;-moveright;-forward;-back"</span> <span class="o">)</span><span class="p">;</span>
+        ent.SetVelocity<span class="o">(</span> Vector<span class="o">(</span><span class="m">0</span>,0,0<span class="o">)</span> <span class="o">)</span><span class="p">;</span>
+        ScriptPrintMessageCenterAll<span class="o">(</span> <span class="s2">"已回到点B"</span> <span class="o">)</span><span class="p">;</span> 
+    <span class="o">}</span>
+    //else <span class="o">{</span>
+    //  ScriptPrintMessageCenterAll<span class="o">(</span> <span class="s2">"回到点B失败，位置为(0, 0, 0)"</span> <span class="o">)</span><span class="p">;</span> 
+    //<span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">function</span> cam<span class="o">(</span> i, j <span class="o">)</span> <span class="o">{</span>
+    //分享摄像机运动指令 A to B . i 和 j 与运动速度相关
+    <span class="k">if</span><span class="o">(</span> PositionA.x <span class="o">||</span> PositionA.y <span class="o">||</span> AngleA.x <span class="o">||</span> AngleA.y <span class="o">||</span> PositionB.x <span class="o">||</span> PositionB.y <span class="o">||</span> AngleB.x <span class="o">||</span> AngleB.y <span class="o">)</span> <span class="o">{</span>
+        <span class="nb">command</span> <span class="o">=</span> <span class="s2">"spec_mode 6;"</span><span class="p">;</span>
+        <span class="nb">command</span> <span class="o">=</span> <span class="nb">command</span> + <span class="s2">"spec_goto "</span> + PositionA.x + <span class="s2">" "</span> + PositionA.y + <span class="s2">" "</span> + PositionA.z + <span class="s2">" "</span> + AngleA.x + <span class="s2">" "</span> + AngleA.y  +<span class="s2">";"</span><span class="p">;</span>
+        <span class="nb">command</span> <span class="o">=</span> <span class="nb">command</span> + <span class="s2">"spec_lerpto "</span> + PositionB.x + <span class="s2">" "</span> + PositionB.y + <span class="s2">" "</span> + PositionB.z + <span class="s2">" "</span> + AngleB.x + <span class="s2">" "</span> + AngleB.y + <span class="s2">" "</span> + i + <span class="s2">" "</span> + j + <span class="s2">";"</span> <span class="p">;</span>
+        printl<span class="o">(</span> <span class="s2">""</span> <span class="o">)</span><span class="p">;</span>
+        printl<span class="o">(</span> <span class="s2">"&gt;&gt;&gt; 摄像机运动指令已生成"</span> <span class="o">)</span><span class="p">;</span>
+        printl<span class="o">(</span> <span class="s2">""</span> <span class="o">)</span><span class="p">;</span>
+        printl<span class="o">(</span> <span class="nb">command</span> <span class="o">)</span><span class="p">;</span>
+    <span class="o">}</span>
+    <span class="k">else</span> <span class="o">{</span>
+        ScriptPrintMessageCenterAll<span class="o">(</span> <span class="s2">"分享摄像机运动指令失败，点A或B位置为(0, 0, 0)"</span> <span class="o">)</span><span class="p">;</span> 
+    <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="hll"><span class="k">function</span> hint<span class="o">()</span> <span class="o">{</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 加载设置[auto.cfg]     :  exec auto"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 跑图,练习道具        :  exec practice"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 对枪,SOLO        :  exec solo"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 地图中加载设置[auto.cfg]      :  Insert键"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 地图中一键跑图[practice.cfg]  :  Delete键"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──────────────────────  BOT相关  ─────────────────────────────"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT难度(3&gt;2&gt;1&gt;0) :  bot_difficulty 3;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT静止      :  bot_stop 1;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT拿刀      :  bot_knives_only;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT拿手枪     :  bot_pistols_only;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT全武器     :  bot_all_weapons;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT加入队伍(any=任意)    :  bot_join_team ct;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT模仿玩家动作  :  bot_mimic 1;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT模仿角度偏移  :  bot_mimic_yaw_offset 180;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT蹲下          :  bot_crouch 1; "</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 添加BOT          :  bot_add;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 删除BOT          :  bot_kick;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 杀死BOT      :  bot_kill;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 放置BOT      :  bot_place;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──────────────────────  常用指令  ─────────────────────────────"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 热身开始       :  mp_warmup_start;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 热身结束       :  mp_warmup_end;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 重新开始游戏     :  mp_restartgame 1;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 回合开始静止1s       :  mp_freezetime 1;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 回合结束等待2s       :  mp_round_restart_delay 2;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 投掷物轨迹时间30s     :  sv_grenade_trajectory_time 30;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 弹着点时间30s       :  sv_showimpacts_time 30;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── C4爆炸时间999s         :  mp_c4timer 999;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── C4任意处放置        :  mp_plant_c4_anywhere 1;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 队友伤害       :  mp_teammates_are_enemies 1;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 忽视胜利条件         :  mp_ignore_round_win_conditions 1;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 雷达显示所有人        :  mp_radar_showall 1;"</span> <span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 调整护甲(2=全甲) :  mp_free_armor 1;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 无敌(个人)     :  god;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 无敌(所有人)        :  gods;"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"───────────────────────  快捷键  ─────────────────────────────"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── BOT蹲下      :  2"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 杀死BOT      :  /"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 切换透视模式         :  5"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 重现最近一次投掷物  :  8"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 切换实时预测轨迹   :  4"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 加速时间，松开恢复  :  ."</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 预测投掷物轨迹30s :  6"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 添加BOT          :  +"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 删除BOT          :  -"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 放置BOT          :  *"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 重新开始       :  0"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 飞行             :  Enter"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──────────────────────  脚本功能  ─────────────────────────────"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 保存点A       :  ←"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 回到点A       :  ↑"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 保存点B       :  →"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 回到点B       :  ↓"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span>@<span class="s2">"──── 补齐血条头甲和满道具    :  9"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"──── 打印提示(指令)   :  hint"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"═════════════════════════════════════════════════════════════"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll">    printl<span class="o">(</span><span class="s2">"·在线游戏时请勿加载或多次加载本CFG，可能会被踢出"</span><span class="o">)</span><span class="p">;</span>
+</span><span class="hll"><span class="o">}</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</input></input></input></input></div>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Codeforces 个人工具" class="md-footer__link md-footer__link--prev" href="../16/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Codeforces 个人工具
+            </div>
+</div>
+</a>
+<a aria-label="Next: Mermaid" class="md-footer__link md-footer__link--next" href="../14/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              Mermaid
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
+<script src="../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
