@@ -57,6 +57,13 @@ title: Tags
  
 
 
+## <span class="tag">MATLAB</span>
+
+  * [Grader 修改标准答案漏洞](posts\26.md)
+
+ 
+
+
 ## <span class="tag">OpenFOAM</span>
 
   * [OpenFOAM 安装](posts\11.md)
@@ -105,7 +112,7 @@ title: Tags
 
 ## <span class="tag">个人随笔</span>
 
-  * [项目管理课程后的思考](posts\26.md)
+  * [项目管理课程后的思考](posts\29.md)
 
  
 
@@ -121,13 +128,13 @@ title: Tags
 
 ## <span class="tag">整理沉淀</span>
 
-  * [💾The Economics of Open Source](posts\12.md)
+  * [💾 The Economics of Open Source](posts\12.md)
 
-  * [💾How to Disagree](posts\22.md)
+  * [💾 How to Disagree](posts\22.md)
 
-  * [💾对开发人员有用的定律、理论、原则和模式](posts\24.md)
+  * [💾 对开发人员有用的定律、理论、原则和模式](posts\24.md)
 
-  * [💾中文文案排版指北](posts\25.md)
+  * [💾 中文文案排版指北](posts\25.md)
 
   * [诗词歌赋](posts\lts\1.md)
 
@@ -145,5 +152,19 @@ title: Tags
 ## <span class="tag">机器学习</span>
 
   * [工程应用中的机器学习简介](posts\21.md)
+
+ 
+
+
+## <span class="tag">英语学习</span>
+
+  * [容易发音错误的程序相关单词](posts\27.md)
+
+ 
+
+
+## <span class="tag">重要日子</span>
+
+  * [✨ 12 月 30 日](posts\28.md)
 
  
