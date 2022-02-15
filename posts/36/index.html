@@ -1,0 +1,583 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../../assets/image/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-8.0.2" name="generator"/>
+<title>💾 采访 OpenFOAM 创始人 - Iydon's Blog</title>
+<link href="../../assets/stylesheets/main.816931ca.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.9204c3b2.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>function __md_scope(e,t,_){return new URL(_||(t===localStorage?"../..":"../.."),location).pathname+"."+e}function __md_get(e,t=localStorage,_){return JSON.parse(t.getItem(__md_scope(e,t,_)))}function __md_set(e,t,_=localStorage,o){try{_.setItem(__md_scope(e,_,o),JSON.stringify(t))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="none" data-md-color-primary="none" data-md-color-scheme="" dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#openfoam-40-cfd">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Iydon's Blog" class="md-header__button md-logo" data-md-component="logo" href="../.." title="Iydon's Blog">
+<img alt="logo" src="../../assets/image/favicon.png"/>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Iydon's Blog
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              💾 采访 OpenFOAM 创始人
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      Home
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../tags.html">
+      Tags
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../lts/1/">
+        LTS
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../37/">
+        Year 2022
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../28/">
+        Year 2021
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Iydon's Blog" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="Iydon's Blog">
+<img alt="logo" src="../../assets/image/favicon.png"/>
+</a>
+    Iydon's Blog
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../tags.html">
+        Tags
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3">
+          LTS
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="LTS" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          LTS
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/1/">
+        诗词歌赋
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/2/">
+        知乎收藏夹整理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/3/">
+        哔哩哔哩收藏夹整理
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/4/">
+        Doki Doki Literature Club!
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../lts/5/">
+        Markdown 特性
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4">
+          Year 2022
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Year 2022" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          Year 2022
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_1">
+          January
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="January" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_1">
+<span class="md-nav__icon md-icon"></span>
+          January
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../37/">
+        知乎匿名回答评论区争执纪实
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+        💾 采访 OpenFOAM 创始人
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../35/">
+        SUSTech 研究生个人分数汇总
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../34/">
+        利用随机种子可逆地打乱图片
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../33/">
+        项目管理课程知识点（待续）
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../32/">
+        所有汉字叠在一起会看到什么
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../31/">
+        利用取模在图片中隐藏信息
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../30/">
+        SUSTech 研究生 GPA 计算
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../29/">
+        📅 2021 年度年终总结计划
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5">
+          Year 2021
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Year 2021" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          Year 2021
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_1" id="__nav_5_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_1">
+          December
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="December" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_1">
+<span class="md-nav__icon md-icon"></span>
+          December
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../28/">
+        ✨ 12 月 30 日
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../27/">
+        容易发音错误的程序相关单词
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../26/">
+        Grader 修改标准答案漏洞
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../25/">
+        💾 中文文案排版指北
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../24/">
+        💾 对开发人员有用的定律、理论、原则和模式
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../23/">
+        Low-Poly 风格化照片
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../22/">
+        💾 How to Disagree
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../21/">
+        工程应用中的机器学习简介
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../20/">
+        📅 21-12 上月总结与本月规划
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2">
+          November
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="November" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          November
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../19/">
+        Apache 映射子域名到特定文件夹
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../18/">
+        在 Rust 中使用过程宏模拟 Python 缩进语法
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../17/">
+        Jupyter Notebook 测试
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../16/">
+        Codeforces 个人工具
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../15/">
+        CS:GO 配置文件
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../14/">
+        Mermaid
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../13/">
+        名探偵コナン主线汇总
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../12/">
+        💾 The Economics of Open Source
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../11/">
+        OpenFOAM 安装
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../10/">
+        简单禁用打印、复制，自动虚化
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../9/">
+        🔒博客加密测试
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../8/">
+        RapidCFD 安装
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../7/">
+        PDF 转图片
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../6/">
+        Overleaf 上使用中文
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../5/">
+        图片压缩
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../4/">
+        📅 21-11 上月总结与本月规划
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_3" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3">
+          October
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="October" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          October
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../3/">
+        Nuitka 初探
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../2/">
+        WebAssembly 初探
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../1/">
+        创世纪
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="openfoam-40-cfd"><a href="https://mp.weixin.qq.com/s/nDmSdQ1fQ_791L8XJgVwRg">我采访了 OpenFOAM 创始人：40 年 CFD 经验谈</a></h1>
+<p>下面这篇文章是李东岳之前去采访 OpenFOAM 基金会创始人 Henry Weller 的一段描述。</p>
+<details class="question">
+<summary>李东岳：编程和 CFD 算法，哪一个更加重要？</summary>
+<p><mark class="critic">算法更加重要</mark>。</p>
+<p>大多数 CFD 工程师并不需要经常编程，因为 CFD 代码已经非常成熟了，并且包含了非常多的功能。</p>
+<p>但是对于一个 CFD 工程师而言，很有必要了解到底什么是“物理”，什么是“边界条件”。这些都和流体动力学有关，而和编程关系不大。</p>
+<p>很好地了解 CFD 的概念在选择合适的数值方法、离散格式、时间步、松弛因子的时候非常有必要。这通常可以通过培训来达到目的，因为<mark class="critic">算法本质上其主要通过积累的经验来获得</mark>。</p>
+<p>使用 CFD 就像玩乐器，你不能捡起一把小提琴就弹“维尔瓦底”的曲子，这需要很长的练习。</p>
+<p>然而，相对于 GUI 的点击型操作，OpenFOAM 中 CFD 算例的自动运行 VERY 有用，因此如果会写脚本的话就更好了。脚本语言不重要，大家可以使用随便一个脚本语言，只要你熟悉就好。</p>
+</details>
+<details class="question">
+<summary>李东岳：网格对 FVM 计算重要性如何？</summary>
+<p>网格大小对流体结构的求解是一个关键的因素。</p>
+<p><mark class="critic">网格尤其对 LES/DES 非常重要</mark>，因为在 LES/DES 中，网格和湍流尺度有关。网格大小、密度、分布应该小心处理。</p>
+<p>并且 <mark class="critic">FVM 对网格类型非常敏感</mark>。</p>
+<p>因为 FVM 使用体心或者面心作为高斯积分点。在做局部插值的时候，例如，面心只从相邻网格获取的时候，如果网格比较有序，<mark class="critic">FVM 只是 2 阶精度</mark>。</p>
+<p>我在算法中提供了高阶多项式插值方法，这种方法在不规则以及混乱的网格也可以提供 2 阶精度。但是这些方法很耗费计算资源并且不是很稳定。能避免就避免。</p>
+<p>总之，<mark class="critic">网格质量和分布是非常重要的</mark>。</p>
+<p>另外，规则的六面体网格要比规则的四面体网格更加精准，虽然俩种网格在使用中心差分的时候都具有 2 阶精度。对于混乱的网格，多面体网格要比四面体网格更加精准。</p>
+<p>所以基本上说，<mark class="critic">六面体网格是最好的，并且应该尽量避免不规则和混乱的网格</mark>。</p>
+<p>对于复杂几何，OpenFOAM 对网格生成有严格的限制。其求解器对大部分网格也可运行收敛。<mark class="critic">但是网格这个东西，还是尽可能的做成最好吧</mark>！</p>
+<p>foamyHexMesh 的理念很好，它会生成规则的六面体网格，对于一些复杂的几何区域，它会生成多面体而不是四面体。</p>
+<p>然而，foamyHexMesh 并不是一个资助的项目并且目前也没有人资助。目前这个程序是 VERY 脆弱的，因此只是一个演示。</p>
+</details>
+<details class="question">
+<summary>李东岳：从个人经验来讲，如何学习 CFD？</summary>
+<p>运行算例，从错误中吸取教训，运行更多算例，吸取更多的教训。</p>
+<p>Live and breath CFD！这是我学 CFD 的经验。</p>
+<p>我从上个世纪 80 年代开始学习 CFD，现在掌握 CFD 经验的人要比 80 年代的时候多得多。</p>
+<p>现在有很多的培训课，<mark class="critic">很多的书，直接从别人的肩膀上吸取经验非常容易。但是当然了，还是从自身经验来学习最好</mark>！</p>
+</details>
+<details class="question">
+<summary>李东岳：相对于商业代码，OpenFOAM 的特性是什么？</summary>
+<p><mark class="critic">OpenFOAM 是完全免费并且开源的</mark>！</p>
+<p>这提供了 HUGE 的方便，不仅仅在费用上，也表现在灵活性、以及从软件本身来学习 CFD 上。</p>
+<p><mark class="critic">OpenFOAM 不仅仅让 CFD 工程师可以模拟算例，它也允许 CFD 工程师来学习 CFD 方法、开发 CFD 算法并完善，甚至某一天创造一个可以替代 OpenFOAM 的软件</mark>。</p>
+<p>并且，许多 CFD 问题需要一些特别的功能、算法、方程、边界条件等。在商业软件中植入这些功能可能会失败。</p>
+<p>有些情况下可能有必要完全的重新写一个求解器、边界条件等。</p>
+<p><mark class="critic">OpenFOAM 提供了最大的灵活以及扩展性</mark>。</p>
+<p>这些对使用 CFD 做研究的人非常重要，因此<mark class="critic">我觉得 OpenFOAM 可能在某一天会替代闭源软件</mark>。</p>
+</details>
+<details class="question">
+<summary>李东岳：您为什么选择 C++ 开发 CFD 代码而不是 FORTRAN？</summary>
+<p>在 1984 年本科之前，我最开始的时候从 Basic 语言学起，然后转移到 Pascal 和 C。<mark class="critic">在我的论文里我使用 FORTRAN-77，不得不说，这实在 AWFUL！！！太差劲了</mark>！C 和 Pascal 比 FORTRAN-77 会好一点，实际上在 1960 年 ALGOL-60 问世之后，FORTRAN 就差不多废弃了。</p>
+<p>当我开始我的 CFD 研究的时候，我拿到的代码是一堆不能编译的令人费解的 FORTRAN-77 代码。</p>
+<p>在我学习了几个月之后，我认为我可以玩的更好。</p>
+<p>1989 年，我接触到了 C++，并立即看到了对象起源编程的优势。从那时起，我就开始用 C++ 设计 FOAM。</p>
+<p>然而，在那个年代，C++ 刚刚问世，并且编译器 VERY 脆弱甚至不能工作。慢慢的我认识到泛型编程（Generic Programming）对操作场、矩阵、方程等是非常有必要的。</p>
+<p>在 C++ 模板问世之前，我就使用 C 方法、宏和脚本得方法来实现。在 C++ 模板问世之后，以及 gcc 编译器的发布，我把我之前写的代码用 C++ 模板重写，这就是 OpenFOAM 的前身。</p>
+<p>当然了，FORTRAN 不能做这些。不过 FORTRAN-90 有一些面向对象的能力，但是它完全没有泛型编程的功能，<mark class="critic">据我所知，FORTRAN 以后亦不会添加泛型编程的概念</mark>。</p>
+<p>基本上，<mark class="critic">我个人认为 FORTRAN 语言快要废了，在 1960 年那时候就应该埋在土里了</mark>。目前使用 FORTRAN 的人大部分是由于历史原因，只为了新代码能和非常久远的代码兼容。</p>
+<p>FORTRAN 和 C++ 都因为“向下兼容”而有一些致命的缺点。FORTRAN 为了和 FORTRAN-77 兼容，C++ 为了和 ANSI C 兼容。然而最大的区别是，ANSI C 本身就是一个非常好的语言，FORTRAN 可不是。</p>
+<p>在未来，<mark class="critic">我希望 C++ 被一个更干净、简单、有力的语言代替，这个语言需要支持泛型编程</mark>，这对 OpenFOAM 以及其他相类似的代码非常重要。</p>
+<p>我一直关注编程语言的发展，<mark class="critic">我认为 C++ 的可能的代替品有 Nim，Rust 以及 Chapel</mark>，然而目前这些语言缺少一些我需要的必要功能，添加这些功能，比如 C++ 中的高度的泛型编程概念，可能需要很多年。</p>
+<p>我希望他们在若干年后添加这些特性。同时，C++ 的缺陷需要妥善处理。在 C++17 中，我希望“概念”（concept）和“模块”（module）特性会被加入，所有的 C++ 编程人员都会受益。</p>
+<p>额，这个问题我想说的太多了，尤其是关于 C++ 的缺陷以及我对未来编程语言的期望。这越说越远了，就这么遭！</p>
+</details>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: 知乎匿名回答评论区争执纪实" class="md-footer__link md-footer__link--prev" href="../37/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              知乎匿名回答评论区争执纪实
+            </div>
+</div>
+</a>
+<a aria-label="Next: SUSTech 研究生个人分数汇总" class="md-footer__link md-footer__link--next" href="../35/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Next
+              </span>
+              SUSTech 研究生个人分数汇总
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.01824240.min.js"}</script>
+<script src="../../assets/javascripts/bundle.ff0eccb3.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
