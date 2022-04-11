@@ -99,7 +99,7 @@
       </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link md-tabs__link--active" href="../37/">
+<a class="md-tabs__link md-tabs__link--active" href="../40/">
         Year 2022
       </a>
 </li>
@@ -186,31 +186,76 @@
           Year 2022
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" id="__nav_4_1" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_1">
-          January
+          April
           <span class="md-nav__icon md-icon"></span>
 </label>
-<nav aria-label="January" class="md-nav" data-md-level="2">
+<nav aria-label="April" class="md-nav" data-md-level="2">
 <label class="md-nav__title" for="__nav_4_1">
 <span class="md-nav__icon md-icon"></span>
-          January
+          April
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../40/">
+        科幻电影网站简要总结
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_2">
+          March
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="March" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_2">
+<span class="md-nav__icon md-icon"></span>
+          March
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../39/">
+        Numbeo 爬虫
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../38/">
+        CS:GO 个人武器 StatTrak™ 记录
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_3">
+          February
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="February" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_3">
+<span class="md-nav__icon md-icon"></span>
+          February
         </label>
 <ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../37/">
-        知乎匿名回答评论区争执纪实
+        为 git commit 提供 Emoji 指南
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../36/">
-        💾 采访 OpenFOAM 创始人
+        知乎匿名回答评论区争执纪实
       </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="../35/">
-        SUSTech 研究生个人分数汇总
+        💾 采访 OpenFOAM 创始人
       </a>
 </li>
 <li class="md-nav__item">
@@ -223,6 +268,21 @@
         项目管理课程知识点（待续）
       </a>
 </li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" id="__nav_4_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4_4">
+          January
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="January" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_4_4">
+<span class="md-nav__icon md-icon"></span>
+          January
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
 <li class="md-nav__item">
 <a class="md-nav__link" href="../32/">
         所有汉字叠在一起会看到什么
@@ -507,6 +567,7 @@
 </tr>
 </tbody>
 </table>
+<p>安装依赖：<code>pip install beautifulsoup4 requests pandas</code></p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">  1</span>
 <span class="normal">  2</span>
 <span class="normal">  3</span>
@@ -611,7 +672,26 @@
 <span class="normal">102</span>
 <span class="normal">103</span>
 <span class="normal">104</span>
-<span class="normal">105</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="normal">105</span>
+<span class="normal">106</span>
+<span class="normal">107</span>
+<span class="normal">108</span>
+<span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span>
+<span class="normal">116</span>
+<span class="normal">117</span>
+<span class="normal">118</span>
+<span class="normal">119</span>
+<span class="normal">120</span>
+<span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">typing</span> <span class="k">as</span> <span class="nn">t</span>
 
 <span class="kn">import</span> <span class="nn">bs4</span>
@@ -627,6 +707,7 @@
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cookies</span><span class="p">:</span> <span class="n">Cookies</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cookies</span> <span class="o">=</span> <span class="n">cookies</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_grades</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_rank</span> <span class="o">=</span> <span class="kc">None</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">grades</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
@@ -647,7 +728,7 @@
         <span class="n">grade_credit</span> <span class="o">=</span> <span class="p">[</span>
             <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'xszscj'</span><span class="p">][</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">'xf'</span><span class="p">][</span><span class="mi">0</span><span class="p">]))</span>
             <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">grades</span><span class="o">.</span><span class="n">iterrows</span><span class="p">()</span>
-            <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">'xszscj'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+            <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">'xszscj'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="s1">'xscj'</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s1">'P'</span>
         <span class="p">]</span>
         <span class="n">credits</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">c</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">grade_credit</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">credits</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
@@ -667,6 +748,16 @@
             <span class="k">return</span> <span class="mf">0.0</span>
         <span class="k">return</span> <span class="nb">sum</span><span class="p">([</span><span class="n">g</span><span class="o">*</span><span class="n">c</span> <span class="k">for</span> <span class="n">g</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">grade_credit</span><span class="p">])</span> <span class="o">/</span> <span class="n">credits</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">rank</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">'''Rank'''</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rank</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="s1">'https://tis.sustech.edu.cn/cjgl/xscjgl/xsgrcjcx/queryXnAndXqXfj'</span>
+            <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'RoleCode'</span><span class="p">:</span> <span class="s1">'02'</span><span class="p">}</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_cookies</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_rank</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">'xfjandpm'</span><span class="p">][</span><span class="s1">'PM'</span><span class="p">]</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rank</span>
+
     <span class="nd">@classmethod</span>
     <span class="k">def</span> <span class="nf">login</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">username</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'TIS'</span><span class="p">:</span>
         <span class="n">url</span> <span class="o">=</span> <span class="s1">'https://cas.sustech.edu.cn/cas/login'</span>
@@ -674,7 +765,7 @@
         <span class="n">cookies</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://tis.sustech.edu.cn'</span><span class="p">)</span><span class="o">.</span><span class="n">cookies</span>
         <span class="k">with</span> <span class="n">requests</span><span class="o">.</span><span class="n">session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
             <span class="n">response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
-            <span class="n">soup</span> <span class="o">=</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'lxml'</span><span class="p">)</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">bs4</span><span class="o">.</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
             <span class="n">execution</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'input[name$="execution"]'</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="s1">'value'</span><span class="p">]</span>
             <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
                 <span class="s1">'username'</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span> <span class="s1">'password'</span><span class="p">:</span> <span class="n">password</span><span class="p">,</span>
@@ -700,8 +791,13 @@
 
     <span class="k">def</span> <span class="nf">_mapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">grade</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="k">for</span> <span class="p">(</span><span class="n">boundary</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="p">[</span>
+            <span class="c1"># 研究生</span>
             <span class="p">(</span><span class="mi">95</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">),</span> <span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">),</span> <span class="p">(</span><span class="mi">85</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">),</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span> <span class="p">(</span><span class="mi">77</span><span class="p">,</span> <span class="mf">2.7</span><span class="p">),</span>
             <span class="p">(</span><span class="mi">73</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">),</span> <span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">),</span> <span class="p">(</span><span class="mi">67</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">),</span> <span class="p">(</span><span class="mi">63</span><span class="p">,</span> <span class="mf">1.3</span><span class="p">),</span> <span class="p">(</span><span class="mi">60</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">),</span>
+            <span class="c1"># 本科生</span>
+            <span class="c1"># (97, 4.00), (93, 3.94), (90, 3.85), (87, 3.73), (83, 3.55),</span>
+            <span class="c1"># (80, 3.32), (77, 3.09), (73, 2.78), (70, 2.42), (67, 2.08),</span>
+            <span class="c1"># (63, 1.63), (60, 1.15),</span>
         <span class="p">]:</span>
             <span class="k">if</span> <span class="n">grade</span> <span class="o">&gt;=</span> <span class="n">boundary</span><span class="p">:</span>
                 <span class="k">return</span> <span class="n">value</span>
@@ -709,13 +805,16 @@
 
 
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">getpass</span> <span class="kn">import</span> <span class="n">getpass</span>
-
-    <span class="n">username</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'(账号) &gt;&gt;&gt; '</span><span class="p">),</span> <span class="n">getpass</span><span class="p">(</span><span class="s1">'(密码) &gt;&gt;&gt; '</span><span class="p">)</span>
-    <span class="n">tis</span> <span class="o">=</span> <span class="n">TIS</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'GPA: </span><span class="si">{</span><span class="n">tis</span><span class="o">.</span><span class="n">gpa</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'SA:  </span><span class="si">{</span><span class="n">tis</span><span class="o">.</span><span class="n">sa</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">tis</span><span class="o">.</span><span class="n">grades</span><span class="p">)</span>
+    <span class="n">tis</span> <span class="o">=</span> <span class="n">TIS</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">'(username) &gt;&gt;&gt; '</span><span class="p">),</span> <span class="nb">input</span><span class="p">(</span><span class="s1">'(password) &gt;&gt;&gt; '</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'Rank: </span><span class="si">{</span><span class="n">tis</span><span class="o">.</span><span class="n">rank</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'GPA:  </span><span class="si">{</span><span class="n">tis</span><span class="o">.</span><span class="n">gpa</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'SA:   </span><span class="si">{</span><span class="n">tis</span><span class="o">.</span><span class="n">sa</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span>
+        <span class="n">tis</span><span class="o">.</span><span class="n">grades</span>
+            <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s1">'课程成绩'</span><span class="p">,</span> <span class="s1">'学分'</span><span class="p">],</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+            <span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
 </article>

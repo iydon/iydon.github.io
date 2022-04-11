@@ -19,6 +19,10 @@ title: Tags
 
   * [CS:GO 配置文件](posts\15.md)
 
+  * [为 git commit 提供 Emoji 指南](posts\37.md)
+
+  * [CS:GO 个人武器 StatTrak™ 记录](posts\38.md)
+
  
 
 
@@ -93,7 +97,11 @@ title: Tags
 
   * [利用随机种子可逆地打乱图片](posts\34.md)
 
-  * [SUSTech 研究生个人分数汇总](posts\35.md)
+  * [CS:GO 个人武器 StatTrak™ 记录](posts\38.md)
+
+  * [Numbeo 爬虫](posts\39.md)
+
+  * [科幻电影网站简要总结](posts\40.md)
 
   * [图片压缩](posts\5.md)
 
@@ -117,13 +125,6 @@ title: Tags
  
 
 
-## <span class="tag">SUSTech</span>
-
-  * [SUSTech 研究生个人分数汇总](posts\35.md)
-
- 
-
-
 ## <span class="tag">WebAssembly</span>
 
   * [WebAssembly 初探](posts\2.md)
@@ -135,7 +136,7 @@ title: Tags
 
   * [项目管理课程知识点（待续）](posts\33.md)
 
-  * [知乎匿名回答评论区争执纪实](posts\37.md)
+  * [知乎匿名回答评论区争执纪实](posts\36.md)
 
  
 
@@ -161,7 +162,7 @@ title: Tags
 
   * [💾 中文文案排版指北](posts\25.md)
 
-  * [💾 采访 OpenFOAM 创始人](posts\36.md)
+  * [💾 采访 OpenFOAM 创始人](posts\35.md)
 
   * [诗词歌赋](posts\lts\1.md)
 

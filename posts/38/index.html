@@ -7,7 +7,7 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <link href="../../assets/image/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.2.3, mkdocs-material-8.0.2" name="generator"/>
-<title>利用随机种子可逆地打乱图片 - Iydon's Blog</title>
+<title>CS:GO 个人武器 StatTrak™ 记录 - Iydon's Blog</title>
 <link href="../../assets/stylesheets/main.816931ca.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.9204c3b2.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -41,7 +41,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              利用随机种子可逆地打乱图片
+              CS:GO 个人武器 StatTrak™ 记录
             
           </span>
 </div>
@@ -206,8 +206,8 @@
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--nested">
-<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" id="__nav_4_2" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_2">
           March
           <span class="md-nav__icon md-icon"></span>
@@ -223,16 +223,17 @@
         Numbeo 爬虫
       </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="../38/">
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
         CS:GO 个人武器 StatTrak™ 记录
       </a>
 </li>
 </ul>
 </nav>
 </li>
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" id="__nav_4_3" type="checkbox"/>
 <label class="md-nav__link" for="__nav_4_3">
           February
           <span class="md-nav__icon md-icon"></span>
@@ -258,9 +259,8 @@
         💾 采访 OpenFOAM 创始人
       </a>
 </li>
-<li class="md-nav__item md-nav__item--active">
-<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
-<a class="md-nav__link md-nav__link--active" href="./">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../34/">
         利用随机种子可逆地打乱图片
       </a>
 </li>
@@ -517,8 +517,8 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<h1>利用随机种子可逆地打乱图片</h1>
-<p>思路来自随机数库可以通过设定种子复现结果，因此随机种子可以简单地作为某个加密算法的密码。程序如下，但是程序目前仅支持 PNG，三通道图片上出现的问题可能是由读取与写入的 RGB 顺序导致的。</p>
+<h1>CS:GO 个人武器 StatTrak™ 记录</h1>
+<p>我对数据十分着迷，所以在玩游戏的时候，我也会想方设法地去记录各种各样的数据，或许这只是为了证明我来过，想在这个世界上留下一些痕迹，当然，我也很喜欢 <a href="https://steamcommunity.com/id/iydon">Steam</a> 中记录游戏时长的行为。在 <a href="https://steamcommunity.com/app/730">CS:GO</a> 中，官方有 StatTrak™ 计数器武器可以记录在游戏中击败玩家的数目，所以在 <code>2020-11-02 12:17:04</code> 起，我就开始将自己使用的武器全部替换为 StatTrak™，前后花了大概 100 多元。以下是将 StatTrak™ 计数器整合的代码，结果见最后。最后需要说明的是，由于前几天放松打休闲时又碰到外挂，因此短时间内我不会再碰 CS:GO 了。</p>
 <table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -553,119 +553,191 @@
 <span class="normal">32</span>
 <span class="normal">33</span>
 <span class="normal">34</span>
-<span class="normal">35</span>
-<span class="normal">36</span>
-<span class="normal">37</span>
-<span class="normal">38</span>
-<span class="normal">39</span>
-<span class="normal">40</span>
-<span class="normal">41</span>
-<span class="normal">42</span>
-<span class="normal">43</span>
-<span class="normal">44</span>
-<span class="normal">45</span>
-<span class="normal">46</span>
-<span class="normal">47</span>
-<span class="normal">48</span>
-<span class="normal">49</span>
-<span class="normal">50</span>
-<span class="normal">51</span>
-<span class="normal">52</span>
-<span class="normal">53</span>
-<span class="normal">54</span>
-<span class="normal">55</span>
-<span class="normal">56</span>
-<span class="normal">57</span>
-<span class="normal">58</span>
-<span class="normal">59</span>
-<span class="normal">60</span>
-<span class="normal">61</span>
-<span class="normal">62</span>
-<span class="normal">63</span>
-<span class="normal">64</span>
-<span class="normal">65</span>
-<span class="normal">66</span>
-<span class="normal">67</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
-<span class="kn">import</span> <span class="nn">pathlib</span> <span class="k">as</span> <span class="nn">p</span>
-<span class="kn">import</span> <span class="nn">typing</span> <span class="k">as</span> <span class="nn">t</span>
-
-<span class="kn">import</span> <span class="nn">cv2</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">requests</span>
 
 
-<span class="n">Path</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">Path</span><span class="p">]</span>
-<span class="n">Seed</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">'https://steamcommunity.com/inventory/76561199070253926/730/2'</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'l'</span><span class="p">:</span> <span class="s1">'schinese'</span><span class="p">,</span> <span class="s1">'count'</span><span class="p">:</span> <span class="mi">999</span><span class="p">}</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
 
+<span class="n">weapons</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">stat_prefix</span> <span class="o">=</span> <span class="s1">'StatTrak™ 已认证杀敌数：'</span>
+<span class="n">icon_prefix</span> <span class="o">=</span> <span class="s1">'https://community.cloudflare.steamstatic.com/economy/image/'</span>
+<span class="k">for</span> <span class="n">description</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">'descriptions'</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">description</span><span class="p">[</span><span class="s1">'descriptions'</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">text</span><span class="p">[</span><span class="s1">'value'</span><span class="p">]</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">stat_prefix</span><span class="p">):</span>
+            <span class="n">weapons</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+                <span class="s1">'name'</span><span class="p">:</span> <span class="n">description</span><span class="p">[</span><span class="s1">'market_name'</span><span class="p">],</span>
+                <span class="s1">'hash'</span><span class="p">:</span> <span class="n">description</span><span class="p">[</span><span class="s1">'market_hash_name'</span><span class="p">],</span>
+                <span class="s1">'stat'</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="s1">'value'</span><span class="p">][</span><span class="nb">len</span><span class="p">(</span><span class="n">stat_prefix</span><span class="p">):]),</span>
+                <span class="s1">'icon'</span><span class="p">:</span> <span class="n">icon_prefix</span> <span class="o">+</span> <span class="n">description</span><span class="p">[</span><span class="s1">'icon_url'</span><span class="p">],</span>
+            <span class="p">})</span>
+<span class="n">weapons</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">'stat'</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="k">class</span> <span class="nc">Image</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">_data</span> <span class="o">=</span> <span class="n">data</span>
-
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_file</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Image'</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">Path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="o">.</span><span class="n">suffix</span> <span class="o">!=</span> <span class="s1">'.png'</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s1">'The bug with non-png images is not yet fixed'</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">cv2</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">path</span><span class="p">)))</span>
-
-    <span class="nd">@property</span>
-    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span>
-
-    <span class="k">def</span> <span class="nf">encryption</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="n">Seed</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Image'</span><span class="p">:</span>
-        <span class="n">rng</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rng</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-        <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">shape</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">height</span><span class="p">)</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="n">rng</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">width</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:][:,</span> <span class="n">y</span><span class="p">,</span> <span class="p">:])</span>
-
-    <span class="k">def</span> <span class="nf">decryption</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="n">Seed</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Image'</span><span class="p">:</span>
-        <span class="n">rng</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_rng</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-        <span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="o">.</span><span class="n">shape</span>
-        <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inverse_permutation</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">height</span><span class="p">))</span>
-        <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_inverse_permutation</span><span class="p">(</span><span class="n">rng</span><span class="o">.</span><span class="n">permutation</span><span class="p">(</span><span class="n">width</span><span class="p">))</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">[</span><span class="n">x</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:][:,</span> <span class="n">y</span><span class="p">,</span> <span class="p">:])</span>
-
-    <span class="k">def</span> <span class="nf">write</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">'Image'</span><span class="p">:</span>
-        <span class="n">cv2</span><span class="o">.</span><span class="n">imwrite</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span>
-
-    <span class="k">def</span> <span class="nf">_rng</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seed</span><span class="p">:</span> <span class="n">Seed</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">:</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">seed</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-            <span class="n">md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">seed</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s1">'utf-8'</span><span class="p">))</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
-            <span class="n">seed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">md5</span><span class="p">[:</span><span class="mi">8</span><span class="p">],</span> <span class="mi">16</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">RandomState</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">_inverse_permutation</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">array</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">:</span>
-        <span class="n">ans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">array</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">ith</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
-            <span class="n">ans</span><span class="p">[</span><span class="n">element</span><span class="p">]</span> <span class="o">=</span> <span class="n">ith</span>
-        <span class="k">return</span> <span class="n">ans</span>
-
-
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">'__main__'</span><span class="p">:</span>
-    <span class="n">Image</span> \
-        <span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s1">'target.png'</span><span class="p">)</span> \
-        <span class="o">.</span><span class="n">encryption</span><span class="p">(</span><span class="s1">'Just Monika.'</span><span class="p">)</span> \
-        <span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">'output.png'</span><span class="p">)</span>
-
-    <span class="c1"># Image \</span>
-    <span class="c1">#     .from_file('output.png') \</span>
-    <span class="c1">#     .decryption('Just Monika.') \</span>
-    <span class="c1">#     .write('reverse.png')</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">weapons</span><span class="p">)</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'hash'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'hash'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'|'</span><span class="p">,</span> <span class="s1">'&amp;#124;'</span><span class="p">))</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">'icon'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'icon'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="sa">f</span><span class="s1">'![](</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s1">)'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span>
+    <span class="n">df</span>
+        <span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span>
+            <span class="s1">'hash'</span><span class="p">:</span> <span class="s1">'Name'</span><span class="p">,</span>
+            <span class="s1">'stat'</span><span class="p">:</span> <span class="s1">'StatTrak™'</span><span class="p">,</span>
+            <span class="s1">'icon'</span><span class="p">:</span> <span class="s1">'Image'</span><span class="p">,</span>
+        <span class="p">})</span>
+        <span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="p">)</span>
 </code></pre></div>
 </td></tr></table>
-<figure>
-<p><img alt="Dummy image" src="../../assets/image/image_shuffle.png">
-</img></p>
-<figcaption>打乱顺序的图片：output.png</figcaption>
-</figure>
+<table>
+<thead>
+<tr>
+<th align="left">Name</th>
+<th align="right">StatTrak™</th>
+<th align="left">Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">StatTrak™ AWP | Phobos (Field-Tested)</td>
+<td align="right">16716</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot621FABz7PLfYQJS5NO0m5O0mvLwOq7c2G4EucYk2L7Ep42t3VGx_RFtamHyLISXe1JsYw6Fr1e9wuvr1JS5vs7XiSw0S4ZJl1o"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ AK-47 | Uncharted (Field-Tested)</td>
+<td align="right">8908</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhjxszJemkV092sgIWIqPrxN7LEmyUI6ZAm3ujCpNymjFWx-0RtNjzzctWVIQdqYg7X81nok7rp0JbpuJ7M1zI97ZAMLLaU"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ M4A4 | Evil Daimyo (Field-Tested)</td>
+<td align="right">6415</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou-6kejhjxszFJTwW09mgnYy0k_b9PqLeqWZU7Mxkh6fFoN2n0QDj_xA-NTj2LdWUdlI_M1yG_Fbqw-npgJG9vJ3OyXRi7HMn-z-DyAyYxUni"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ MAG-7 | Sonar (Minimal Wear)</td>
+<td align="right">4069</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7uifDhh3szFcDoV09G3mIaEhfrLP7LWnn8fsMQp3eqYrNmg2FXgrUVsajz0J4OSIFQ6N17TrADtl-bph5G17cuamGwj5HefKFtC5g"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ Desert Eagle | Blue Ply (Well-Worn)</td>
+<td align="right">2914</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PDdTjlH7du6kb-Zkuf4OrjQqWZU7Mxkh6fC8Y2s0Afs-BI_ZWD1dY6SIQRvYlHY8lbrk-u-hJG5tJTIySRi6Chw-z-DyIuNTzaA"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ P90 | Freight (Battle-Scarred)</td>
+<td align="right">2841</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopuP1FABz7OORIQJB49KilYmFkuXLO77QgHIfvMBz3OjDrI722AS18kBtNm_zJNOUJlM8YlDXqQDvkOu90JLu7ZzKymwj5HfLhG8Zqw"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ MP9 | Modest Threat (Battle-Scarred)</td>
+<td align="right">2189</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6r8FABz7P7YKAJB49C5mpnbxsj8NrrHjyVU7JIgju2TpNmg3VaxqURtamigJoOdJlJsM1DY_lDtleu5g8Dvtc6c1zI97R3VmbKW"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ Five-SeveN | Flame Test (Field-Tested)</td>
+<td align="right">2063</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLOzLhRlxfbGTjpR09q_goWYkuHxPYTZmX9u-sp1tf_I-oDwnGu5rhc1JjTtJNCSdFA2YgzWrlG9yOm70JG8vc7LzSY273Z04irflxHmgB8ebrc81-veFwteJ7IA3Q"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ AUG | Triqua (Well-Worn)</td>
+<td align="right">1784</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJN_t24k4W0g-X9MrXWmm5u5cB1g_zMu4qmjQO3rhJoNm31J4PGIQNrMwyDqAK9yebr18Lq6JvLy3tl6ykh7S3D30vgaHf5G_Y"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ USP-S | Flashback (Field-Tested)</td>
+<td align="right">1568</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoo6m1FBRp3_bGcjhQ09-jq5WYh8jyP7rCnmlQ685Oh-zF_Jn4xgPn_EBoY2r3d9LGIAZvZlrQ81nqxu7s1MS7tc_KnHNm7iUksymMzUCpwUYbE0FNUN8"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ Tec-9 | Fubar (Battle-Scarred)</td>
+<td align="right">1488</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhnwMzcdD4b09qjloGZqP_xMq3I2GgE68cm2u2SoN733Aa3-0BqYGr0LYLAJwY5NQrT-Ae-wOnv15_qtJ_XiSw0yLYEEQk"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ MAC-10 | Carnivore (Well-Worn)</td>
+<td align="right">1471</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou7umeldf0uL3fDxB043mq4GHnvL6DLjQm2Ru5cB1g_zMu93zjQXsr0RpMG77ItDHcw48ZlyF8wfqkuvqg8C5vsiYzScy6SYr4H7D30vgqob1iS4"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ SSG 08 | Slashed (Well-Worn)</td>
+<td align="right">1303</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopamie19f0Ob3Yi5FvISJnY2GmOXgMrfum25V4dB8xLHE8In03VGxrRc5YWH7cIDEIVRqN13V_QDskue8hse7uJqbyXJr7nI8pSGK39kSQ_o"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ Negev | Dazzle (Field-Tested)</td>
+<td align="right">1008</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpouL-iLhFf2-r3fzhF6cqJkIGRjfvxDLbUkmJE5Ysi2LjF84ijjgWx_0tkMG6hI4OWdwdtNAzW_1jrkO2705fvvJ7Nn3EypGB8smY-FtJF"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ Glock-18 | Off World (Well-Worn)</td>
+<td align="right">989</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbaqKAxf0Ob3djFN79eJnY6PnvD7DLbUkmJE5YtwjLGVpd6s2QKx-RI_Yzr6JtOUdQRvZ1HVrAC5wOvqhp65tcnAn3ZqpGB8sqVEHs1X"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ SG 553 | Aloha (Field-Tested)</td>
+<td align="right">785</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopb3wflFfwOP3YjoXv4-JlYyEn_bLPr7Vn35cppd03biXoNTx3FGw-hdkNWn1J4OXJAA7ZwrX-Fi-wOfsgZ-575jKznJ9-n51LP6RrCM"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ MP7 | Mischief (Well-Worn)</td>
+<td align="right">649</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpou6ryFAR17P7YJgJQ7d-9kZSOkuXLPr7Vn35cppB0ievCp9322VKyrkVrN2z6dtOSdVQ8MAyD-QC6lb26gZe7tZrMmnF9-n51z91ErA0"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ P250 | Ripple (Field-Tested)</td>
+<td align="right">602</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopujwezhh3szYI2gS08-mgZSFnvzLPr7Vn35cppUpj-iUodT22Qbtrkc4N2-hdYCRIVI_YV3Rr1W-k-zqhpPvuMicwCR9-n513b0mLHA"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ Sawed-Off | Origami (Field-Tested)</td>
+<td align="right">417</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopbuyLgNv1fX3cih9_92hkYSEkfHLPKnYkWpc4fp8j-3I4IG70Q2wrkA-NmnxdYWSe1c7NArZ-wO7we7ohsfqus7NzCdh6SR07X6IyQv3308UVXVJPg"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ XM1014 | Slipstream (Field-Tested)</td>
+<td align="right">408</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgporrf0e1Y07PvRTiVPvYznwL-Nhfb3J7rdqWld_cBOh-zF_Jn4xgy1_ERvZDyiLdWcIA9qMwnT_QXsw7znjcC96p3LzXA27yUn7HbfykOpwUYbRb0JoCY"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ SCAR-20 | Blueprint (Battle-Scarred)</td>
+<td align="right">394</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopbmkOVUw7PDdTj9O-dmmhomFg8jnMLrDqWNU6dNoxOuUp4mmjlDmrRJra2v0I9XDcgA8NFiB_VnvwOjr1sC6v5nJynFlsiE8pSGKvY4kvCk"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ FAMAS | Decommissioned (Field-Tested)</td>
+<td align="right">382</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposLuoKhRf0Ob3dzxP7c-JmpWAksjgNrXCn2Rf18h0juDU-MKjigTl-RVkNj-lIICcJAQ2aV-D-FC9yerphJbvtZjJnXFj6yggt33agVXp1rkpZwmY"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ PP-Bizon | Night Riot (Field-Tested)</td>
+<td align="right">329</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotLO_JAlf0Ob3czRY49KJhomEg8j5Nr_Yg2YfupUn0-zD89Wm0VbjrhZvYDr6LYGXdwc3ZV_T_VK-wum8hZO57pXAyWwj5He1ZOwnGg"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ Galil AR | Rocket Pop (Battle-Scarred)</td>
+<td align="right">312</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposbupIgthwczLZAJF7dC_mIGZqOf1Ia_YlWdU-_p5j-jX7MKk0VCy-hVqZW-lcISRdQ84YlHV_wfvw--508O6vp_PnSEw6yIitynVgVXp1i5FTBPj"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ G3SG1 | Orange Crash (Field-Tested)</td>
+<td align="right">162</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposem2LFZfwOP3dm5R642JmYmHnuP9MrTDl2VW7fp8j-3I4IG7jgfsqUNtYDqlJteSIVA7N1zQ-le9l7i51sTt7svOzHVluHF04yqMnAv330_agV6dCw"/></td>
+</tr>
+<tr>
+<td align="left">StatTrak™ R8 Revolver | Crimson Web (Field-Tested)</td>
+<td align="right">89</td>
+<td align="left"><img alt="" src="https://community.cloudflare.steamstatic.com/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpopL-zJAt21uH3eSR9-9m0h7-GkvP9JrafwjsHvsQmjrmUrI_00FHg_EY-YzzycNeSe1JsZw7R-QS6kry5hMDu6oOJlyWSzPI-Lg"/></td>
+</tr>
+</tbody>
+</table>
 </article>
 </div>
 </div>
 </main>
 <footer class="md-footer">
 <nav aria-label="Footer" class="md-footer__inner md-grid">
-<a aria-label="Previous: 💾 采访 OpenFOAM 创始人" class="md-footer__link md-footer__link--prev" href="../35/" rel="prev">
+<a aria-label="Previous: Numbeo 爬虫" class="md-footer__link md-footer__link--prev" href="../39/" rel="prev">
 <div class="md-footer__button md-icon">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
 </div>
@@ -674,17 +746,17 @@
 <span class="md-footer__direction">
                 Previous
               </span>
-              💾 采访 OpenFOAM 创始人
+              Numbeo 爬虫
             </div>
 </div>
 </a>
-<a aria-label="Next: 项目管理课程知识点（待续）" class="md-footer__link md-footer__link--next" href="../33/" rel="next">
+<a aria-label="Next: 为 git commit 提供 Emoji 指南" class="md-footer__link md-footer__link--next" href="../37/" rel="next">
 <div class="md-footer__title">
 <div class="md-ellipsis">
 <span class="md-footer__direction">
                 Next
               </span>
-              项目管理课程知识点（待续）
+              为 git commit 提供 Emoji 指南
             </div>
 </div>
 <div class="md-footer__button md-icon">
