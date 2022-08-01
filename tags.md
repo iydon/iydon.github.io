@@ -49,6 +49,8 @@ title: Tags
 
 ## <span class="tag">LaTeX</span>
 
+  * [TeXFind 重出江湖](posts\41.md)
+
   * [Overleaf 上使用中文](posts\6.md)
 
  
@@ -102,6 +104,12 @@ title: Tags
   * [Numbeo 爬虫](posts\39.md)
 
   * [科幻电影网站简要总结](posts\40.md)
+
+  * [TeXFind 重出江湖](posts\41.md)
+
+  * [在 Word 中插入高亮代码](posts\42.md)
+
+  * [WGS84 与 GCJ-02 坐标系](posts\43.md)
 
   * [图片压缩](posts\5.md)
 
